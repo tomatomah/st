@@ -22,9 +22,14 @@ class StaffDetector:
         self.model, self.preprocess = clip.load(model_name, device=device)
         self.device = device
 
-        # Optimize for inference
+        # CPU optimization settings
         torch.set_num_threads(4)
         torch.set_grad_enabled(False)
+
+        # Warm up the model
+        dummy_image = torch.randn(1, 3, 224, 224).to(device)
+        with torch.no_grad():
+            _ = self.model.encode_image(dummy_image)
 
     def register_uniform(self, image_path, name="staff_uniform"):
         """Register uniform image"""
@@ -76,8 +81,23 @@ class ONNXStaffDetector:
             raise FileNotFoundError(f"ONNX model not found: {onnx_path}")
 
         print("Loading ONNX model...")
-        self.session = ort.InferenceSession(onnx_path, providers=["CPUExecutionProvider"])
+
+        # Optimized session options
+        sess_options = ort.SessionOptions()
+        sess_options.intra_op_num_threads = 4
+        sess_options.inter_op_num_threads = 1
+        sess_options.execution_mode = ort.ExecutionMode.ORT_SEQUENTIAL
+        sess_options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_ALL
+
+        self.session = ort.InferenceSession(onnx_path, sess_options=sess_options, providers=["CPUExecutionProvider"])
+
         self.preprocess = self._create_preprocess()
+        self.input_name = self.session.get_inputs()[0].name
+
+        # Warm up the model
+        dummy_input = np.random.randn(1, 3, 224, 224).astype(np.float32)
+        _ = self.session.run(None, {self.input_name: dummy_input})
+        print("ONNX model loaded and warmed up")
 
     def _create_preprocess(self):
         """Create preprocessing pipeline"""
@@ -118,10 +138,10 @@ class ONNXStaffDetector:
             raise FileNotFoundError(f"Image not found: {image_path}")
 
         image = Image.open(image_path).convert("RGB")
-        image_array = self.preprocess(image).unsqueeze(0).numpy()
+        image_array = self.preprocess(image).unsqueeze(0).numpy().astype(np.float32)
 
-        input_name = self.session.get_inputs()[0].name
-        features = self.session.run(None, {input_name: image_array})[0]
+        # ONNX inference
+        features = self.session.run(None, {self.input_name: image_array})[0]
 
         # L2 normalize
         norm = np.linalg.norm(features, axis=1, keepdims=True)
@@ -147,6 +167,7 @@ def convert_to_onnx(model_name="RN50", output_path="clip_image_encoder.onnx"):
             input_names=["image"],
             output_names=["features"],
             dynamic_axes={"image": {0: "batch_size"}, "features": {0: "batch_size"}},
+            do_constant_folding=True,
         )
 
         onnx.checker.check_model(onnx.load(output_path))
@@ -171,11 +192,15 @@ def benchmark(uniform_path="uniform.jpg", iterations=10):
     pytorch_detector = StaffDetector()
     pytorch_detector.register_uniform(uniform_path)
 
+    # Warmup runs (not counted)
+    for _ in range(3):
+        _ = pytorch_detector.detect_staff(uniform_path)
+
     pytorch_times = []
     for _ in range(iterations):
-        start = time.time()
+        start = time.perf_counter()
         pytorch_result = pytorch_detector.detect_staff(uniform_path)
-        pytorch_times.append(time.time() - start)
+        pytorch_times.append(time.perf_counter() - start)
 
     # Test ONNX
     print("Testing ONNX...")
@@ -188,23 +213,32 @@ def benchmark(uniform_path="uniform.jpg", iterations=10):
     onnx_detector = ONNXStaffDetector()
     onnx_detector.register_uniform(uniform_path)
 
+    # Warmup runs (not counted)
+    for _ in range(3):
+        _ = onnx_detector.detect_staff(uniform_path)
+
     onnx_times = []
     for _ in range(iterations):
-        start = time.time()
+        start = time.perf_counter()
         onnx_result = onnx_detector.detect_staff(uniform_path)
-        onnx_times.append(time.time() - start)
+        onnx_times.append(time.perf_counter() - start)
 
     # Results
-    pytorch_avg = np.mean(pytorch_times) * 1000
-    onnx_avg = np.mean(onnx_times) * 1000
+    pytorch_avg = np.mean(pytorch_times[2:]) * 1000  # Skip first 2 runs
+    onnx_avg = np.mean(onnx_times[2:]) * 1000
     speedup = pytorch_avg / onnx_avg
     accuracy_diff = abs(pytorch_result["similarity"] - onnx_result["similarity"])
 
-    print(f"\nResults:")
+    print(f"\nResults (average of {iterations-2} runs after warmup):")
     print(f"PyTorch: {pytorch_avg:.2f}ms")
     print(f"ONNX:    {onnx_avg:.2f}ms")
     print(f"Speedup: {speedup:.2f}x")
     print(f"Accuracy diff: {accuracy_diff:.6f}")
+
+    # Detailed timing analysis
+    print(f"\nDetailed timing:")
+    print(f"PyTorch - Min: {min(pytorch_times[2:])*1000:.2f}ms, Max: {max(pytorch_times[2:])*1000:.2f}ms")
+    print(f"ONNX    - Min: {min(onnx_times[2:])*1000:.2f}ms, Max: {max(onnx_times[2:])*1000:.2f}ms")
 
 
 def demo():
