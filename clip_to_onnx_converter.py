@@ -1,282 +1,220 @@
-import json
 import os
-import time
 
 import clip
 import numpy as np
 import onnx
 import onnxruntime as ort
 import torch
-import torchvision.transforms as transforms
-from PIL import Image
 
 
-class BaseStaffDetector:
-    """スタッフ判定システムの基底クラス"""
-
-    def __init__(self, threshold=0.6):
-        self.threshold = threshold
-        self.uniform_features = None
-        self.uniform_name = None
-
-    def _load_image(self, image_path):
-        """画像読み込み"""
-        if not os.path.exists(image_path):
-            raise FileNotFoundError(f"画像が見つかりません: {image_path}")
-        return Image.open(image_path).convert("RGB")
-
-    def _calculate_similarity(self, features1, features2):
-        """類似度計算（サブクラスで実装）"""
-        raise NotImplementedError
-
-    def register_uniform(self, image_path, name="staff_uniform"):
-        """制服画像登録"""
-        print(f"制服登録中: {image_path}")
-        self.uniform_features = self._extract_features(image_path)
-        self.uniform_name = name
-        print(f"制服登録完了: {name}")
-
-    def detect_staff(self, image_path):
-        """スタッフ判定"""
-        if self.uniform_features is None:
-            raise ValueError("制服画像が未登録です")
-
-        person_features = self._extract_features(image_path)
-        similarity = self._calculate_similarity(person_features, self.uniform_features)
-
-        return {
-            "is_staff": similarity > self.threshold,
-            "similarity": similarity,
-            "uniform_name": self.uniform_name,
-            "threshold": self.threshold,
-        }
+def get_input_size(model_name):
+    """Get appropriate input size for each model"""
+    if "@336px" in model_name or "336px" in model_name:
+        return 336
+    elif "RN50x" in model_name:
+        # These models use different resolutions
+        if "RN50x4" in model_name:
+            return 288
+        elif "RN50x16" in model_name:
+            return 384
+        elif "RN50x64" in model_name:
+            return 448
+    return 224
 
 
-class SimpleStaffDetector(BaseStaffDetector):
-    """PyTorch版スタッフ判定"""
-
-    def __init__(self, model_name="RN50", device="cpu", threshold=0.6):
-        super().__init__(threshold)
-        print(f"Loading CLIP model: {model_name}")
-        self.model, self.preprocess = clip.load(model_name, device=device)
-        self.device = device
-        torch.set_num_threads(4)
-        torch.set_grad_enabled(False)
-
-    def _extract_features(self, image_path):
-        """特徴量抽出"""
-        image = self._load_image(image_path)
-        image_tensor = self.preprocess(image).unsqueeze(0).to(self.device)
-
-        with torch.no_grad():
-            features = self.model.encode_image(image_tensor)
-            return features / features.norm(dim=-1, keepdim=True)
-
-    def _calculate_similarity(self, features1, features2):
-        """コサイン類似度計算"""
-        return torch.cosine_similarity(features1, features2).item()
-
-
-class OptimizedStaffDetector(BaseStaffDetector):
-    """ONNX版高速スタッフ判定"""
-
-    def __init__(self, onnx_path="clip_image_encoder.onnx", threshold=0.6):
-        super().__init__(threshold)
-        print("Loading ONNX model...")
-        self.session = ort.InferenceSession(onnx_path, providers=["CPUExecutionProvider"])
-        self.preprocess = self._create_preprocess()
-        print("ONNX model loaded")
-
-    def _create_preprocess(self):
-        """前処理パイプライン作成"""
-        # デフォルトCLIP設定
-        config = {
-            "resize": 224,
-            "center_crop": 224,
-            "mean": [0.48145466, 0.4578275, 0.40821073],
-            "std": [0.26862954, 0.26130258, 0.27577711],
-        }
-
-        # 設定ファイルがあれば読み込み
-        if os.path.exists("clip_preprocess_config.json"):
-            with open("clip_preprocess_config.json", "r") as f:
-                config.update(json.load(f))
-
-        return transforms.Compose(
-            [
-                transforms.Resize(config["resize"], interpolation=transforms.InterpolationMode.BICUBIC),
-                transforms.CenterCrop(config["center_crop"]),
-                transforms.ToTensor(),
-                transforms.Normalize(mean=config["mean"], std=config["std"]),
-            ]
-        )
-
-    def _extract_features(self, image_path):
-        """ONNX特徴量抽出"""
-        image = self._load_image(image_path)
-        image_array = self.preprocess(image).unsqueeze(0).numpy()
-
-        # ONNX推論
-        input_name = self.session.get_inputs()[0].name
-        features = self.session.run(None, {input_name: image_array})[0]
-
-        # L2正規化
-        norm = np.linalg.norm(features, axis=1, keepdims=True)
-        return features / (norm + 1e-8)
-
-    def _calculate_similarity(self, features1, features2):
-        """NumPy類似度計算"""
-        return np.dot(features1, features2.T).item()
-
-
-class CLIPConverter:
-    """CLIP→ONNX変換器"""
-
-    @staticmethod
-    def convert(model_name="RN50", output_path="clip_image_encoder.onnx"):
-        """ONNX変換実行"""
+def convert_clip_to_onnx(model_name, output_dir="onnx_models"):
+    """Convert a single CLIP model to ONNX format"""
+    try:
         print(f"Converting {model_name} to ONNX...")
 
-        try:
-            # モデル読み込み
-            model, _ = clip.load(model_name, device="cpu", jit=False)
-            model.visual.eval()
+        # Create output directory
+        os.makedirs(output_dir, exist_ok=True)
 
-            # ONNX変換
-            dummy_input = torch.randn(1, 3, 224, 224)
-            torch.onnx.export(
-                model.visual,
-                dummy_input,
-                output_path,
-                export_params=True,
-                opset_version=17,
-                input_names=["image"],
-                output_names=["features"],
-                dynamic_axes={"image": {0: "batch_size"}, "features": {0: "batch_size"}},
-            )
+        # Load CLIP model and preprocess
+        model, preprocess = clip.load(model_name, device="cpu", jit=False)
+        model.visual.eval()
 
-            # 検証
-            onnx.checker.check_model(onnx.load(output_path))
+        # Get appropriate input size
+        input_size = get_input_size(model_name)
+        print(f"Using input size: {input_size}x{input_size}")
 
-            # 設定保存
-            CLIPConverter._save_config()
+        # Create dummy input with appropriate size
+        dummy_input = torch.randn(1, 3, input_size, input_size)
 
-            print(f"✅ 変換完了: {output_path}")
-            return True
+        # Generate output filename
+        safe_name = model_name.replace("/", "_").replace("@", "_")
+        output_path = os.path.join(output_dir, f"clip_{safe_name}.onnx")
 
-        except Exception as e:
-            print(f"❌ 変換失敗: {e}")
-            return False
+        # Export to ONNX
+        torch.onnx.export(
+            model.visual,
+            dummy_input,
+            output_path,
+            export_params=True,
+            opset_version=17,
+            input_names=["image"],
+            output_names=["features"],
+            dynamic_axes={"image": {0: "batch_size"}, "features": {0: "batch_size"}},
+            do_constant_folding=True,
+        )
 
-    @staticmethod
-    def _save_config():
-        """前処理設定保存"""
-        config = {
-            "resize": 224,
-            "center_crop": 224,
-            "mean": [0.48145466, 0.4578275, 0.40821073],
-            "std": [0.26862954, 0.26130258, 0.27577711],
-        }
-        with open("clip_preprocess_config.json", "w") as f:
-            json.dump(config, f, indent=2)
+        # Verify the model
+        onnx.checker.check_model(onnx.load(output_path))
+
+        print(f"✓ Successfully converted: {output_path}")
+        return True
+
+    except Exception as e:
+        print(f"✗ Failed to convert {model_name}: {e}")
+        return False
 
 
-def benchmark(uniform_path="uniform.jpg", iterations=10):
-    """性能比較テスト"""
-    if not os.path.exists(uniform_path):
-        print(f"❌ テスト画像が見つかりません: {uniform_path}")
-        return
+def convert_all_clip_models():
+    """Convert all available CLIP models to ONNX"""
+    # Available CLIP models
+    models = ["RN50", "RN101", "RN50x4", "RN50x16", "RN50x64", "ViT-B/32", "ViT-B/16", "ViT-L/14", "ViT-L/14@336px"]
 
-    print("=== 性能比較テスト ===")
+    print("=== CLIP to ONNX Conversion ===")
+    print(f"Converting {len(models)} models...")
 
-    # PyTorch版テスト
-    print("\n1. PyTorch版")
-    pytorch_detector = SimpleStaffDetector()
-    pytorch_detector.register_uniform(uniform_path)
+    success_count = 0
+    failed_models = []
 
-    pytorch_times = []
-    for _ in range(iterations):
-        start = time.time()
-        pytorch_result = pytorch_detector.detect_staff(uniform_path)
-        pytorch_times.append(time.time() - start)
+    for model_name in models:
+        if convert_clip_to_onnx(model_name):
+            success_count += 1
+        else:
+            failed_models.append(model_name)
 
-    # ONNX版テスト
-    print("\n2. ONNX版")
-    if not os.path.exists("clip_image_encoder.onnx"):
-        print("❌ ONNXモデルが見つかりません")
-        return
+    print("\n=== Conversion Summary ===")
+    print(f"Successfully converted: {success_count}/{len(models)} models")
 
-    onnx_detector = OptimizedStaffDetector()
-    onnx_detector.register_uniform(uniform_path)
+    if failed_models:
+        print(f"Failed models: {', '.join(failed_models)}")
 
-    onnx_times = []
-    for _ in range(iterations):
-        start = time.time()
-        onnx_result = onnx_detector.detect_staff(uniform_path)
-        onnx_times.append(time.time() - start)
-
-    # 結果表示
-    pytorch_avg = np.mean(pytorch_times) * 1000
-    onnx_avg = np.mean(onnx_times) * 1000
-    speedup = pytorch_avg / onnx_avg
-
-    print(f"\n📊 結果:")
-    print(f"PyTorch: {pytorch_avg:.2f}ms")
-    print(f"ONNX:    {onnx_avg:.2f}ms")
-    print(f"高速化:  {speedup:.2f}x")
-    print(f"精度差:  {abs(pytorch_result['similarity'] - onnx_result['similarity']):.6f}")
+    print("All conversions completed!")
 
 
-def demo():
-    """簡単なデモ"""
-    print("=== CLIP スタッフ判定システム ===")
+def convert_specific_model():
+    """Convert a specific CLIP model selected by user"""
+    # Available CLIP models
+    models = ["RN50", "RN101", "RN50x4", "RN50x16", "RN50x64", "ViT-B/32", "ViT-B/16", "ViT-L/14", "ViT-L/14@336px"]
 
-    # ONNX変換
-    if not os.path.exists("clip_image_encoder.onnx"):
-        print("ONNXモデルを変換中...")
-        if not CLIPConverter.convert():
+    print("\n=== Convert Specific Model ===")
+    print("Available CLIP models:")
+    for i, model_name in enumerate(models, 1):
+        print(f"{i}. {model_name}")
+
+    try:
+        choice = int(input(f"\nSelect model number (1-{len(models)}): ")) - 1
+        if choice < 0 or choice >= len(models):
+            print("Invalid selection")
             return
 
-    # デモ実行
-    detector = OptimizedStaffDetector()
+        selected_model = models[choice]
+        print(f"Selected: {selected_model}")
+        convert_clip_to_onnx(selected_model)
 
-    uniform_path = input("制服画像パス: ").strip()
-    if uniform_path and os.path.exists(uniform_path):
-        detector.register_uniform(uniform_path)
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+    except KeyboardInterrupt:
+        print("\nCancelled by user.")
 
-        person_path = input("判定画像パス: ").strip()
-        if person_path and os.path.exists(person_path):
-            result = detector.detect_staff(person_path)
-            status = "スタッフ" if result["is_staff"] else "非スタッフ"
-            print(f"\n結果: {status} (類似度: {result['similarity']:.4f})")
-        else:
-            print("❌ 判定画像が見つかりません")
+
+def test_onnx_model():
+    """Test all ONNX models feature extraction with random input"""
+    print("\n=== ONNX Model Test ===")
+
+    # List available ONNX models
+    onnx_dir = "onnx_models"
+    if not os.path.exists(onnx_dir):
+        print("No ONNX models found. Please convert models first.")
+        return
+
+    onnx_files = [f for f in os.listdir(onnx_dir) if f.endswith(".onnx")]
+    if not onnx_files:
+        print("No ONNX models found in onnx_models directory.")
+        return
+
+    print(f"Found {len(onnx_files)} ONNX models to test:")
+    for filename in onnx_files:
+        print(f"  - {filename}")
+    print()
+
+    success_count = 0
+    failed_models = []
+
+    # Test each model
+    for i, model_file in enumerate(onnx_files, 1):
+        print(f"[{i}/{len(onnx_files)}] Testing: {model_file}")
+        model_path = os.path.join(onnx_dir, model_file)
+
+        try:
+            # Determine input size from model name
+            input_size = get_input_size(model_file)
+
+            print(f"  Input size: {input_size}x{input_size}")
+
+            # Load ONNX model
+            session = ort.InferenceSession(model_path, providers=["CPUExecutionProvider"])
+            input_name = session.get_inputs()[0].name
+
+            # Create random input tensor
+            random_input = np.random.randn(1, 3, input_size, input_size).astype(np.float32)
+
+            # Extract features
+            features = session.run(None, {input_name: random_input})[0]
+
+            # Normalize features (L2 normalization)
+            features_norm = features / (np.linalg.norm(features, axis=1, keepdims=True) + 1e-8)
+
+            print(f"  ✓ Success - Feature shape: {features.shape}, Norm: {np.linalg.norm(features_norm):.6f}")
+            success_count += 1
+
+        except Exception as e:
+            print(f"  ✗ Failed: {e}")
+            failed_models.append(model_file)
+
+        print()  # Add blank line between tests
+
+    # Summary
+    print("=== Test Summary ===")
+    print(f"Successfully tested: {success_count}/{len(onnx_files)} models")
+
+    if failed_models:
+        print(f"Failed models: {', '.join(failed_models)}")
     else:
-        print("❌ 制服画像が見つかりません")
+        print("All models passed the test!")
+
+    return success_count == len(onnx_files)
 
 
 def main():
-    """メイン関数"""
-    commands = {
-        "1": ("ONNX変換", lambda: CLIPConverter.convert()),
-        "2": ("デモ実行", demo),
-        "3": ("性能比較", benchmark),
-        "4": ("終了", lambda: None),
-    }
-
+    """Main function with menu"""
     while True:
-        print("\n=== メニュー ===")
-        for key, (desc, _) in commands.items():
-            print(f"{key}. {desc}")
+        print("\n=== CLIP to ONNX Converter ===")
+        print("1. Convert all models")
+        print("2. Convert specific model")
+        print("3. Test ONNX model")
+        print("4. Exit")
 
-        choice = input("\n選択: ").strip()
+        choice = input("\nSelect option: ").strip()
 
-        if choice in commands:
-            if choice == "4":
-                break
-            commands[choice][1]()
+        if choice == "1":
+            convert_all_clip_models()
+
+        elif choice == "2":
+            convert_specific_model()
+
+        elif choice == "3":
+            test_onnx_model()
+
+        elif choice == "4":
+            print("Exiting...")
+            break
+
         else:
-            print("❌ 無効な選択")
+            print("Invalid option")
 
 
 if __name__ == "__main__":
