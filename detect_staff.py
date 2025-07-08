@@ -28,16 +28,26 @@ def get_onnx_filename(model_name):
     return f"clip_{safe_name}.onnx"
 
 
-def create_preprocess(input_size):
-    """Create preprocessing pipeline"""
-    return transforms.Compose(
-        [
-            transforms.Resize(input_size, interpolation=transforms.InterpolationMode.BICUBIC),
-            transforms.CenterCrop(input_size),
-            transforms.ToTensor(),
-            transforms.Normalize(mean=[0.48145466, 0.4578275, 0.40821073], std=[0.26862954, 0.26130258, 0.27577711]),
-        ]
-    )
+def preprocess_numpy(image, input_size):
+    """Preprocess image using numpy"""
+    # 1. Resize (bicubic interpolation)
+    image = image.resize((input_size, input_size), Image.BICUBIC)
+
+    # 2. Center crop (already resized to target size, so no cropping needed)
+
+    # 3. Convert to numpy array and normalize to [0, 1]
+    image_array = np.array(image).astype(np.float32) / 255.0
+
+    # 4. Convert from HWC to CHW format
+    image_array = np.transpose(image_array, (2, 0, 1))
+
+    # 5. Normalize using ImageNet statistics (ensure float32)
+    mean = np.array([0.48145466, 0.4578275, 0.40821073], dtype=np.float32).reshape(3, 1, 1)
+    std = np.array([0.26862954, 0.26130258, 0.27577711], dtype=np.float32).reshape(3, 1, 1)
+    image_array = (image_array - mean) / std
+
+    # 6. Add batch dimension and ensure float32
+    return np.expand_dims(image_array, axis=0).astype(np.float32)
 
 
 class PyTorchStaffDetector:
@@ -48,14 +58,17 @@ class PyTorchStaffDetector:
         self.input_size = MODEL_INPUT_SIZES[model_name]
 
         # Load model
-        self.model, self.preprocess = clip.load(model_name, device="cpu", jit=False)
+        self.model, _ = clip.load(model_name, device="cpu", jit=False)
         self.model.visual.eval()
         torch.set_grad_enabled(False)
 
     def extract_features(self, image_path):
         """Extract features from image"""
         image = Image.open(image_path).convert("RGB")
-        image_tensor = self.preprocess(image).unsqueeze(0)
+        image_array = preprocess_numpy(image, self.input_size)
+
+        # Convert numpy array to torch tensor
+        image_tensor = torch.from_numpy(image_array)
 
         with torch.no_grad():
             features = self.model.encode_image(image_tensor)
@@ -86,12 +99,11 @@ class ONNXStaffDetector:
 
         self.session = ort.InferenceSession(onnx_path, providers=["CPUExecutionProvider"])
         self.input_name = self.session.get_inputs()[0].name
-        self.preprocess = create_preprocess(self.input_size)
 
     def extract_features(self, image_path):
         """Extract features from image"""
         image = Image.open(image_path).convert("RGB")
-        image_array = self.preprocess(image).unsqueeze(0).numpy().astype(np.float32)
+        image_array = preprocess_numpy(image, self.input_size)
 
         # ONNX inference
         features = self.session.run(None, {self.input_name: image_array})[0]
