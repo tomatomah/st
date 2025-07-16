@@ -1,2 +1,4 @@
 *.onnx
 onnx_models
+test
+results

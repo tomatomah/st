@@ -1,0 +1,3027 @@
+{
+  "uniform_path": "test/uniform_images/uniform1.jpg",
+  "category_stats": {
+    "staff": {
+      "count": 250,
+      "mean": 0.4434907760620117,
+      "std": 0.0635465602323647,
+      "min": 0.29448074102401733,
+      "max": 0.6268916726112366,
+      "median": 0.4390307813882828,
+      "q25": 0.4027905985713005,
+      "q75": 0.48009105771780014
+    },
+    "non_staff": {
+      "count": 250,
+      "mean": 0.43211790597438815,
+      "std": 0.06843027565989888,
+      "min": 0.1494460105895996,
+      "max": 0.5866663455963135,
+      "median": 0.4401083141565323,
+      "q25": 0.39276523888111115,
+      "q75": 0.4753694459795952
+    }
+  },
+  "all_results": [
+    {
+      "category": "staff",
+      "image": "img_001_crop_0.jpg",
+      "path": "test/staff_images/img_001_crop_0.jpg",
+      "similarity": 0.5109115839004517
+    },
+    {
+      "category": "staff",
+      "image": "img_003_crop_0.jpg",
+      "path": "test/staff_images/img_003_crop_0.jpg",
+      "similarity": 0.46784934401512146
+    },
+    {
+      "category": "staff",
+      "image": "img_093_crop_0.jpg",
+      "path": "test/staff_images/img_093_crop_0.jpg",
+      "similarity": 0.3779371380805969
+    },
+    {
+      "category": "staff",
+      "image": "img_154_crop_0.jpg",
+      "path": "test/staff_images/img_154_crop_0.jpg",
+      "similarity": 0.4837055504322052
+    },
+    {
+      "category": "staff",
+      "image": "img_082_crop_0.jpg",
+      "path": "test/staff_images/img_082_crop_0.jpg",
+      "similarity": 0.42521941661834717
+    },
+    {
+      "category": "staff",
+      "image": "img_032_crop_0.jpg",
+      "path": "test/staff_images/img_032_crop_0.jpg",
+      "similarity": 0.3642868995666504
+    },
+    {
+      "category": "staff",
+      "image": "img_115_crop_0.jpg",
+      "path": "test/staff_images/img_115_crop_0.jpg",
+      "similarity": 0.44099870324134827
+    },
+    {
+      "category": "staff",
+      "image": "img_137_crop_0.jpg",
+      "path": "test/staff_images/img_137_crop_0.jpg",
+      "similarity": 0.4981949031352997
+    },
+    {
+      "category": "staff",
+      "image": "img_035_crop_0.jpg",
+      "path": "test/staff_images/img_035_crop_0.jpg",
+      "similarity": 0.33251649141311646
+    },
+    {
+      "category": "staff",
+      "image": "img_028_crop_0.jpg",
+      "path": "test/staff_images/img_028_crop_0.jpg",
+      "similarity": 0.30833473801612854
+    },
+    {
+      "category": "staff",
+      "image": "img_147_crop_1.jpg",
+      "path": "test/staff_images/img_147_crop_1.jpg",
+      "similarity": 0.49842894077301025
+    },
+    {
+      "category": "staff",
+      "image": "img_141_crop_1.jpg",
+      "path": "test/staff_images/img_141_crop_1.jpg",
+      "similarity": 0.3664790093898773
+    },
+    {
+      "category": "staff",
+      "image": "img_191_crop_0.jpg",
+      "path": "test/staff_images/img_191_crop_0.jpg",
+      "similarity": 0.34741130471229553
+    },
+    {
+      "category": "staff",
+      "image": "img_130_crop_0.jpg",
+      "path": "test/staff_images/img_130_crop_0.jpg",
+      "similarity": 0.4084777235984802
+    },
+    {
+      "category": "staff",
+      "image": "img_047_crop_0.jpg",
+      "path": "test/staff_images/img_047_crop_0.jpg",
+      "similarity": 0.4408946931362152
+    },
+    {
+      "category": "staff",
+      "image": "img_168_crop_1.jpg",
+      "path": "test/staff_images/img_168_crop_1.jpg",
+      "similarity": 0.5503107905387878
+    },
+    {
+      "category": "staff",
+      "image": "img_119_crop_1.jpg",
+      "path": "test/staff_images/img_119_crop_1.jpg",
+      "similarity": 0.4869081676006317
+    },
+    {
+      "category": "staff",
+      "image": "img_129_crop_1.jpg",
+      "path": "test/staff_images/img_129_crop_1.jpg",
+      "similarity": 0.42551571130752563
+    },
+    {
+      "category": "staff",
+      "image": "img_003_crop_1.jpg",
+      "path": "test/staff_images/img_003_crop_1.jpg",
+      "similarity": 0.40977227687835693
+    },
+    {
+      "category": "staff",
+      "image": "img_026_crop_1.jpg",
+      "path": "test/staff_images/img_026_crop_1.jpg",
+      "similarity": 0.41331011056900024
+    },
+    {
+      "category": "staff",
+      "image": "img_119_crop_0.jpg",
+      "path": "test/staff_images/img_119_crop_0.jpg",
+      "similarity": 0.4272576868534088
+    },
+    {
+      "category": "staff",
+      "image": "img_059_crop_0.jpg",
+      "path": "test/staff_images/img_059_crop_0.jpg",
+      "similarity": 0.3102109432220459
+    },
+    {
+      "category": "staff",
+      "image": "img_080_crop_0.jpg",
+      "path": "test/staff_images/img_080_crop_0.jpg",
+      "similarity": 0.5507280826568604
+    },
+    {
+      "category": "staff",
+      "image": "img_084_crop_1.jpg",
+      "path": "test/staff_images/img_084_crop_1.jpg",
+      "similarity": 0.4274737238883972
+    },
+    {
+      "category": "staff",
+      "image": "img_193_crop_2.jpg",
+      "path": "test/staff_images/img_193_crop_2.jpg",
+      "similarity": 0.535199761390686
+    },
+    {
+      "category": "staff",
+      "image": "img_017_crop_1.jpg",
+      "path": "test/staff_images/img_017_crop_1.jpg",
+      "similarity": 0.4034438133239746
+    },
+    {
+      "category": "staff",
+      "image": "img_159_crop_0.jpg",
+      "path": "test/staff_images/img_159_crop_0.jpg",
+      "similarity": 0.5788954496383667
+    },
+    {
+      "category": "staff",
+      "image": "img_045_crop_1.jpg",
+      "path": "test/staff_images/img_045_crop_1.jpg",
+      "similarity": 0.5104647278785706
+    },
+    {
+      "category": "staff",
+      "image": "img_030_crop_0.jpg",
+      "path": "test/staff_images/img_030_crop_0.jpg",
+      "similarity": 0.5704219937324524
+    },
+    {
+      "category": "staff",
+      "image": "img_080_crop_1.jpg",
+      "path": "test/staff_images/img_080_crop_1.jpg",
+      "similarity": 0.6268916726112366
+    },
+    {
+      "category": "staff",
+      "image": "img_092_crop_0.jpg",
+      "path": "test/staff_images/img_092_crop_0.jpg",
+      "similarity": 0.35733914375305176
+    },
+    {
+      "category": "staff",
+      "image": "img_024_crop_0.jpg",
+      "path": "test/staff_images/img_024_crop_0.jpg",
+      "similarity": 0.34524017572402954
+    },
+    {
+      "category": "staff",
+      "image": "img_147_crop_0.jpg",
+      "path": "test/staff_images/img_147_crop_0.jpg",
+      "similarity": 0.4132908582687378
+    },
+    {
+      "category": "staff",
+      "image": "img_034_crop_1.jpg",
+      "path": "test/staff_images/img_034_crop_1.jpg",
+      "similarity": 0.4448416829109192
+    },
+    {
+      "category": "staff",
+      "image": "img_133_crop_1.jpg",
+      "path": "test/staff_images/img_133_crop_1.jpg",
+      "similarity": 0.42040565609931946
+    },
+    {
+      "category": "staff",
+      "image": "img_131_crop_0.jpg",
+      "path": "test/staff_images/img_131_crop_0.jpg",
+      "similarity": 0.36088013648986816
+    },
+    {
+      "category": "staff",
+      "image": "img_143_crop_1.jpg",
+      "path": "test/staff_images/img_143_crop_1.jpg",
+      "similarity": 0.3591269254684448
+    },
+    {
+      "category": "staff",
+      "image": "img_158_crop_1.jpg",
+      "path": "test/staff_images/img_158_crop_1.jpg",
+      "similarity": 0.4931033253669739
+    },
+    {
+      "category": "staff",
+      "image": "img_011_crop_0.jpg",
+      "path": "test/staff_images/img_011_crop_0.jpg",
+      "similarity": 0.33706429600715637
+    },
+    {
+      "category": "staff",
+      "image": "img_122_crop_0.jpg",
+      "path": "test/staff_images/img_122_crop_0.jpg",
+      "similarity": 0.4164004921913147
+    },
+    {
+      "category": "staff",
+      "image": "img_172_crop_0.jpg",
+      "path": "test/staff_images/img_172_crop_0.jpg",
+      "similarity": 0.4490106701850891
+    },
+    {
+      "category": "staff",
+      "image": "img_149_crop_0.jpg",
+      "path": "test/staff_images/img_149_crop_0.jpg",
+      "similarity": 0.5673646926879883
+    },
+    {
+      "category": "staff",
+      "image": "img_133_crop_0.jpg",
+      "path": "test/staff_images/img_133_crop_0.jpg",
+      "similarity": 0.46317896246910095
+    },
+    {
+      "category": "staff",
+      "image": "img_090_crop_1.jpg",
+      "path": "test/staff_images/img_090_crop_1.jpg",
+      "similarity": 0.44944530725479126
+    },
+    {
+      "category": "staff",
+      "image": "img_188_crop_0.jpg",
+      "path": "test/staff_images/img_188_crop_0.jpg",
+      "similarity": 0.5036274194717407
+    },
+    {
+      "category": "staff",
+      "image": "img_036_crop_0.jpg",
+      "path": "test/staff_images/img_036_crop_0.jpg",
+      "similarity": 0.4508601427078247
+    },
+    {
+      "category": "staff",
+      "image": "img_020_crop_0.jpg",
+      "path": "test/staff_images/img_020_crop_0.jpg",
+      "similarity": 0.509523868560791
+    },
+    {
+      "category": "staff",
+      "image": "img_129_crop_2.jpg",
+      "path": "test/staff_images/img_129_crop_2.jpg",
+      "similarity": 0.4672606289386749
+    },
+    {
+      "category": "staff",
+      "image": "img_114_crop_0.jpg",
+      "path": "test/staff_images/img_114_crop_0.jpg",
+      "similarity": 0.33393484354019165
+    },
+    {
+      "category": "staff",
+      "image": "img_177_crop_1.jpg",
+      "path": "test/staff_images/img_177_crop_1.jpg",
+      "similarity": 0.5098780393600464
+    },
+    {
+      "category": "staff",
+      "image": "img_126_crop_1.jpg",
+      "path": "test/staff_images/img_126_crop_1.jpg",
+      "similarity": 0.47730302810668945
+    },
+    {
+      "category": "staff",
+      "image": "img_039_crop_0.jpg",
+      "path": "test/staff_images/img_039_crop_0.jpg",
+      "similarity": 0.42907100915908813
+    },
+    {
+      "category": "staff",
+      "image": "img_160_crop_1.jpg",
+      "path": "test/staff_images/img_160_crop_1.jpg",
+      "similarity": 0.4718513488769531
+    },
+    {
+      "category": "staff",
+      "image": "img_153_crop_0.jpg",
+      "path": "test/staff_images/img_153_crop_0.jpg",
+      "similarity": 0.4478535056114197
+    },
+    {
+      "category": "staff",
+      "image": "img_021_crop_1.jpg",
+      "path": "test/staff_images/img_021_crop_1.jpg",
+      "similarity": 0.35439634323120117
+    },
+    {
+      "category": "staff",
+      "image": "img_186_crop_0.jpg",
+      "path": "test/staff_images/img_186_crop_0.jpg",
+      "similarity": 0.3619198203086853
+    },
+    {
+      "category": "staff",
+      "image": "img_180_crop_0.jpg",
+      "path": "test/staff_images/img_180_crop_0.jpg",
+      "similarity": 0.4686555862426758
+    },
+    {
+      "category": "staff",
+      "image": "img_136_crop_1.jpg",
+      "path": "test/staff_images/img_136_crop_1.jpg",
+      "similarity": 0.3188415765762329
+    },
+    {
+      "category": "staff",
+      "image": "img_177_crop_0.jpg",
+      "path": "test/staff_images/img_177_crop_0.jpg",
+      "similarity": 0.5147451162338257
+    },
+    {
+      "category": "staff",
+      "image": "img_050_crop_0.jpg",
+      "path": "test/staff_images/img_050_crop_0.jpg",
+      "similarity": 0.40289410948753357
+    },
+    {
+      "category": "staff",
+      "image": "img_124_crop_1.jpg",
+      "path": "test/staff_images/img_124_crop_1.jpg",
+      "similarity": 0.44992536306381226
+    },
+    {
+      "category": "staff",
+      "image": "img_165_crop_1.jpg",
+      "path": "test/staff_images/img_165_crop_1.jpg",
+      "similarity": 0.45730602741241455
+    },
+    {
+      "category": "staff",
+      "image": "img_174_crop_1.jpg",
+      "path": "test/staff_images/img_174_crop_1.jpg",
+      "similarity": 0.40300416946411133
+    },
+    {
+      "category": "staff",
+      "image": "img_015_crop_1.jpg",
+      "path": "test/staff_images/img_015_crop_1.jpg",
+      "similarity": 0.44075414538383484
+    },
+    {
+      "category": "staff",
+      "image": "img_052_crop_0.jpg",
+      "path": "test/staff_images/img_052_crop_0.jpg",
+      "similarity": 0.4445715844631195
+    },
+    {
+      "category": "staff",
+      "image": "img_178_crop_1.jpg",
+      "path": "test/staff_images/img_178_crop_1.jpg",
+      "similarity": 0.5603046417236328
+    },
+    {
+      "category": "staff",
+      "image": "img_143_crop_0.jpg",
+      "path": "test/staff_images/img_143_crop_0.jpg",
+      "similarity": 0.29448074102401733
+    },
+    {
+      "category": "staff",
+      "image": "img_069_crop_0.jpg",
+      "path": "test/staff_images/img_069_crop_0.jpg",
+      "similarity": 0.44738858938217163
+    },
+    {
+      "category": "staff",
+      "image": "img_146_crop_1.jpg",
+      "path": "test/staff_images/img_146_crop_1.jpg",
+      "similarity": 0.41343986988067627
+    },
+    {
+      "category": "staff",
+      "image": "img_174_crop_0.jpg",
+      "path": "test/staff_images/img_174_crop_0.jpg",
+      "similarity": 0.3505556583404541
+    },
+    {
+      "category": "staff",
+      "image": "img_190_crop_0.jpg",
+      "path": "test/staff_images/img_190_crop_0.jpg",
+      "similarity": 0.47396114468574524
+    },
+    {
+      "category": "staff",
+      "image": "img_005_crop_0.jpg",
+      "path": "test/staff_images/img_005_crop_0.jpg",
+      "similarity": 0.36368313431739807
+    },
+    {
+      "category": "staff",
+      "image": "img_073_crop_0.jpg",
+      "path": "test/staff_images/img_073_crop_0.jpg",
+      "similarity": 0.3920702338218689
+    },
+    {
+      "category": "staff",
+      "image": "img_158_crop_0.jpg",
+      "path": "test/staff_images/img_158_crop_0.jpg",
+      "similarity": 0.37605157494544983
+    },
+    {
+      "category": "staff",
+      "image": "img_004_crop_0.jpg",
+      "path": "test/staff_images/img_004_crop_0.jpg",
+      "similarity": 0.3676661550998688
+    },
+    {
+      "category": "staff",
+      "image": "img_051_crop_1.jpg",
+      "path": "test/staff_images/img_051_crop_1.jpg",
+      "similarity": 0.4879613518714905
+    },
+    {
+      "category": "staff",
+      "image": "img_046_crop_0.jpg",
+      "path": "test/staff_images/img_046_crop_0.jpg",
+      "similarity": 0.35251548886299133
+    },
+    {
+      "category": "staff",
+      "image": "img_049_crop_1.jpg",
+      "path": "test/staff_images/img_049_crop_1.jpg",
+      "similarity": 0.44681936502456665
+    },
+    {
+      "category": "staff",
+      "image": "img_157_crop_0.jpg",
+      "path": "test/staff_images/img_157_crop_0.jpg",
+      "similarity": 0.49129801988601685
+    },
+    {
+      "category": "staff",
+      "image": "img_130_crop_1.jpg",
+      "path": "test/staff_images/img_130_crop_1.jpg",
+      "similarity": 0.4364997148513794
+    },
+    {
+      "category": "staff",
+      "image": "img_045_crop_0.jpg",
+      "path": "test/staff_images/img_045_crop_0.jpg",
+      "similarity": 0.41113540530204773
+    },
+    {
+      "category": "staff",
+      "image": "img_091_crop_0.jpg",
+      "path": "test/staff_images/img_091_crop_0.jpg",
+      "similarity": 0.5116090774536133
+    },
+    {
+      "category": "staff",
+      "image": "img_040_crop_0.jpg",
+      "path": "test/staff_images/img_040_crop_0.jpg",
+      "similarity": 0.44197383522987366
+    },
+    {
+      "category": "staff",
+      "image": "img_031_crop_0.jpg",
+      "path": "test/staff_images/img_031_crop_0.jpg",
+      "similarity": 0.40908297896385193
+    },
+    {
+      "category": "staff",
+      "image": "img_077_crop_0.jpg",
+      "path": "test/staff_images/img_077_crop_0.jpg",
+      "similarity": 0.38297003507614136
+    },
+    {
+      "category": "staff",
+      "image": "img_044_crop_0.jpg",
+      "path": "test/staff_images/img_044_crop_0.jpg",
+      "similarity": 0.402202308177948
+    },
+    {
+      "category": "staff",
+      "image": "img_027_crop_0.jpg",
+      "path": "test/staff_images/img_027_crop_0.jpg",
+      "similarity": 0.4241468012332916
+    },
+    {
+      "category": "staff",
+      "image": "img_048_crop_1.jpg",
+      "path": "test/staff_images/img_048_crop_1.jpg",
+      "similarity": 0.41246259212493896
+    },
+    {
+      "category": "staff",
+      "image": "img_034_crop_0.jpg",
+      "path": "test/staff_images/img_034_crop_0.jpg",
+      "similarity": 0.46253663301467896
+    },
+    {
+      "category": "staff",
+      "image": "img_187_crop_2.jpg",
+      "path": "test/staff_images/img_187_crop_2.jpg",
+      "similarity": 0.5211584568023682
+    },
+    {
+      "category": "staff",
+      "image": "img_066_crop_0.jpg",
+      "path": "test/staff_images/img_066_crop_0.jpg",
+      "similarity": 0.3717458248138428
+    },
+    {
+      "category": "staff",
+      "image": "img_083_crop_1.jpg",
+      "path": "test/staff_images/img_083_crop_1.jpg",
+      "similarity": 0.401328444480896
+    },
+    {
+      "category": "staff",
+      "image": "img_033_crop_1.jpg",
+      "path": "test/staff_images/img_033_crop_1.jpg",
+      "similarity": 0.3559057116508484
+    },
+    {
+      "category": "staff",
+      "image": "img_022_crop_0.jpg",
+      "path": "test/staff_images/img_022_crop_0.jpg",
+      "similarity": 0.46115976572036743
+    },
+    {
+      "category": "staff",
+      "image": "img_194_crop_0.jpg",
+      "path": "test/staff_images/img_194_crop_0.jpg",
+      "similarity": 0.49401628971099854
+    },
+    {
+      "category": "staff",
+      "image": "img_144_crop_1.jpg",
+      "path": "test/staff_images/img_144_crop_1.jpg",
+      "similarity": 0.528350830078125
+    },
+    {
+      "category": "staff",
+      "image": "img_194_crop_1.jpg",
+      "path": "test/staff_images/img_194_crop_1.jpg",
+      "similarity": 0.48280662298202515
+    },
+    {
+      "category": "staff",
+      "image": "img_105_crop_1.jpg",
+      "path": "test/staff_images/img_105_crop_1.jpg",
+      "similarity": 0.4944806396961212
+    },
+    {
+      "category": "staff",
+      "image": "img_169_crop_1.jpg",
+      "path": "test/staff_images/img_169_crop_1.jpg",
+      "similarity": 0.42691007256507874
+    },
+    {
+      "category": "staff",
+      "image": "img_108_crop_1.jpg",
+      "path": "test/staff_images/img_108_crop_1.jpg",
+      "similarity": 0.3833886384963989
+    },
+    {
+      "category": "staff",
+      "image": "img_155_crop_1.jpg",
+      "path": "test/staff_images/img_155_crop_1.jpg",
+      "similarity": 0.41813933849334717
+    },
+    {
+      "category": "staff",
+      "image": "img_113_crop_0.jpg",
+      "path": "test/staff_images/img_113_crop_0.jpg",
+      "similarity": 0.43810534477233887
+    },
+    {
+      "category": "staff",
+      "image": "img_121_crop_0.jpg",
+      "path": "test/staff_images/img_121_crop_0.jpg",
+      "similarity": 0.4256032109260559
+    },
+    {
+      "category": "staff",
+      "image": "img_148_crop_1.jpg",
+      "path": "test/staff_images/img_148_crop_1.jpg",
+      "similarity": 0.4787549674510956
+    },
+    {
+      "category": "staff",
+      "image": "img_107_crop_1.jpg",
+      "path": "test/staff_images/img_107_crop_1.jpg",
+      "similarity": 0.4003583788871765
+    },
+    {
+      "category": "staff",
+      "image": "img_156_crop_0.jpg",
+      "path": "test/staff_images/img_156_crop_0.jpg",
+      "similarity": 0.3871878981590271
+    },
+    {
+      "category": "staff",
+      "image": "img_125_crop_0.jpg",
+      "path": "test/staff_images/img_125_crop_0.jpg",
+      "similarity": 0.3943246304988861
+    },
+    {
+      "category": "staff",
+      "image": "img_085_crop_0.jpg",
+      "path": "test/staff_images/img_085_crop_0.jpg",
+      "similarity": 0.35239142179489136
+    },
+    {
+      "category": "staff",
+      "image": "img_076_crop_0.jpg",
+      "path": "test/staff_images/img_076_crop_0.jpg",
+      "similarity": 0.4386942684650421
+    },
+    {
+      "category": "staff",
+      "image": "img_056_crop_0.jpg",
+      "path": "test/staff_images/img_056_crop_0.jpg",
+      "similarity": 0.42729976773262024
+    },
+    {
+      "category": "staff",
+      "image": "img_084_crop_0.jpg",
+      "path": "test/staff_images/img_084_crop_0.jpg",
+      "similarity": 0.3838765621185303
+    },
+    {
+      "category": "staff",
+      "image": "img_106_crop_0.jpg",
+      "path": "test/staff_images/img_106_crop_0.jpg",
+      "similarity": 0.43164291977882385
+    },
+    {
+      "category": "staff",
+      "image": "img_161_crop_0.jpg",
+      "path": "test/staff_images/img_161_crop_0.jpg",
+      "similarity": 0.42960768938064575
+    },
+    {
+      "category": "staff",
+      "image": "img_054_crop_0.jpg",
+      "path": "test/staff_images/img_054_crop_0.jpg",
+      "similarity": 0.33819836378097534
+    },
+    {
+      "category": "staff",
+      "image": "img_132_crop_1.jpg",
+      "path": "test/staff_images/img_132_crop_1.jpg",
+      "similarity": 0.43555644154548645
+    },
+    {
+      "category": "staff",
+      "image": "img_031_crop_1.jpg",
+      "path": "test/staff_images/img_031_crop_1.jpg",
+      "similarity": 0.5440551042556763
+    },
+    {
+      "category": "staff",
+      "image": "img_129_crop_0.jpg",
+      "path": "test/staff_images/img_129_crop_0.jpg",
+      "similarity": 0.47649437189102173
+    },
+    {
+      "category": "staff",
+      "image": "img_192_crop_0.jpg",
+      "path": "test/staff_images/img_192_crop_0.jpg",
+      "similarity": 0.3840283155441284
+    },
+    {
+      "category": "staff",
+      "image": "img_146_crop_0.jpg",
+      "path": "test/staff_images/img_146_crop_0.jpg",
+      "similarity": 0.457210898399353
+    },
+    {
+      "category": "staff",
+      "image": "img_120_crop_0.jpg",
+      "path": "test/staff_images/img_120_crop_0.jpg",
+      "similarity": 0.47376549243927
+    },
+    {
+      "category": "staff",
+      "image": "img_105_crop_0.jpg",
+      "path": "test/staff_images/img_105_crop_0.jpg",
+      "similarity": 0.58686363697052
+    },
+    {
+      "category": "staff",
+      "image": "img_125_crop_1.jpg",
+      "path": "test/staff_images/img_125_crop_1.jpg",
+      "similarity": 0.3256651759147644
+    },
+    {
+      "category": "staff",
+      "image": "img_142_crop_0.jpg",
+      "path": "test/staff_images/img_142_crop_0.jpg",
+      "similarity": 0.43932753801345825
+    },
+    {
+      "category": "staff",
+      "image": "img_079_crop_0.jpg",
+      "path": "test/staff_images/img_079_crop_0.jpg",
+      "similarity": 0.5080664157867432
+    },
+    {
+      "category": "staff",
+      "image": "img_135_crop_1.jpg",
+      "path": "test/staff_images/img_135_crop_1.jpg",
+      "similarity": 0.42809242010116577
+    },
+    {
+      "category": "staff",
+      "image": "img_178_crop_0.jpg",
+      "path": "test/staff_images/img_178_crop_0.jpg",
+      "similarity": 0.5364689230918884
+    },
+    {
+      "category": "staff",
+      "image": "img_067_crop_0.jpg",
+      "path": "test/staff_images/img_067_crop_0.jpg",
+      "similarity": 0.4684404730796814
+    },
+    {
+      "category": "staff",
+      "image": "img_165_crop_0.jpg",
+      "path": "test/staff_images/img_165_crop_0.jpg",
+      "similarity": 0.44146960973739624
+    },
+    {
+      "category": "staff",
+      "image": "img_068_crop_1.jpg",
+      "path": "test/staff_images/img_068_crop_1.jpg",
+      "similarity": 0.43753278255462646
+    },
+    {
+      "category": "staff",
+      "image": "img_145_crop_0.jpg",
+      "path": "test/staff_images/img_145_crop_0.jpg",
+      "similarity": 0.46855655312538147
+    },
+    {
+      "category": "staff",
+      "image": "img_173_crop_1.jpg",
+      "path": "test/staff_images/img_173_crop_1.jpg",
+      "similarity": 0.47234421968460083
+    },
+    {
+      "category": "staff",
+      "image": "img_090_crop_0.jpg",
+      "path": "test/staff_images/img_090_crop_0.jpg",
+      "similarity": 0.41665270924568176
+    },
+    {
+      "category": "staff",
+      "image": "img_168_crop_2.jpg",
+      "path": "test/staff_images/img_168_crop_2.jpg",
+      "similarity": 0.4505111575126648
+    },
+    {
+      "category": "staff",
+      "image": "img_078_crop_0.jpg",
+      "path": "test/staff_images/img_078_crop_0.jpg",
+      "similarity": 0.4395531117916107
+    },
+    {
+      "category": "staff",
+      "image": "img_195_crop_2.jpg",
+      "path": "test/staff_images/img_195_crop_2.jpg",
+      "similarity": 0.44817832112312317
+    },
+    {
+      "category": "staff",
+      "image": "img_127_crop_0.jpg",
+      "path": "test/staff_images/img_127_crop_0.jpg",
+      "similarity": 0.40067243576049805
+    },
+    {
+      "category": "staff",
+      "image": "img_026_crop_0.jpg",
+      "path": "test/staff_images/img_026_crop_0.jpg",
+      "similarity": 0.5406849384307861
+    },
+    {
+      "category": "staff",
+      "image": "img_128_crop_1.jpg",
+      "path": "test/staff_images/img_128_crop_1.jpg",
+      "similarity": 0.3710895776748657
+    },
+    {
+      "category": "staff",
+      "image": "img_118_crop_0.jpg",
+      "path": "test/staff_images/img_118_crop_0.jpg",
+      "similarity": 0.41742920875549316
+    },
+    {
+      "category": "staff",
+      "image": "img_116_crop_0.jpg",
+      "path": "test/staff_images/img_116_crop_0.jpg",
+      "similarity": 0.4489537179470062
+    },
+    {
+      "category": "staff",
+      "image": "img_097_crop_1.jpg",
+      "path": "test/staff_images/img_097_crop_1.jpg",
+      "similarity": 0.46380674839019775
+    },
+    {
+      "category": "staff",
+      "image": "img_012_crop_0.jpg",
+      "path": "test/staff_images/img_012_crop_0.jpg",
+      "similarity": 0.31072762608528137
+    },
+    {
+      "category": "staff",
+      "image": "img_168_crop_0.jpg",
+      "path": "test/staff_images/img_168_crop_0.jpg",
+      "similarity": 0.5293201208114624
+    },
+    {
+      "category": "staff",
+      "image": "img_016_crop_0.jpg",
+      "path": "test/staff_images/img_016_crop_0.jpg",
+      "similarity": 0.42807498574256897
+    },
+    {
+      "category": "staff",
+      "image": "img_184_crop_0.jpg",
+      "path": "test/staff_images/img_184_crop_0.jpg",
+      "similarity": 0.623927116394043
+    },
+    {
+      "category": "staff",
+      "image": "img_144_crop_0.jpg",
+      "path": "test/staff_images/img_144_crop_0.jpg",
+      "similarity": 0.528401255607605
+    },
+    {
+      "category": "staff",
+      "image": "img_189_crop_1.jpg",
+      "path": "test/staff_images/img_189_crop_1.jpg",
+      "similarity": 0.5135698318481445
+    },
+    {
+      "category": "staff",
+      "image": "img_140_crop_0.jpg",
+      "path": "test/staff_images/img_140_crop_0.jpg",
+      "similarity": 0.41953134536743164
+    },
+    {
+      "category": "staff",
+      "image": "img_150_crop_1.jpg",
+      "path": "test/staff_images/img_150_crop_1.jpg",
+      "similarity": 0.4870389401912689
+    },
+    {
+      "category": "staff",
+      "image": "img_145_crop_1.jpg",
+      "path": "test/staff_images/img_145_crop_1.jpg",
+      "similarity": 0.4753546118736267
+    },
+    {
+      "category": "staff",
+      "image": "img_078_crop_1.jpg",
+      "path": "test/staff_images/img_078_crop_1.jpg",
+      "similarity": 0.40745535492897034
+    },
+    {
+      "category": "staff",
+      "image": "img_134_crop_0.jpg",
+      "path": "test/staff_images/img_134_crop_0.jpg",
+      "similarity": 0.3595089912414551
+    },
+    {
+      "category": "staff",
+      "image": "img_086_crop_1.jpg",
+      "path": "test/staff_images/img_086_crop_1.jpg",
+      "similarity": 0.4557472765445709
+    },
+    {
+      "category": "staff",
+      "image": "img_089_crop_0.jpg",
+      "path": "test/staff_images/img_089_crop_0.jpg",
+      "similarity": 0.4385521411895752
+    },
+    {
+      "category": "staff",
+      "image": "img_007_crop_0.jpg",
+      "path": "test/staff_images/img_007_crop_0.jpg",
+      "similarity": 0.3891414403915405
+    },
+    {
+      "category": "staff",
+      "image": "img_153_crop_1.jpg",
+      "path": "test/staff_images/img_153_crop_1.jpg",
+      "similarity": 0.4628905653953552
+    },
+    {
+      "category": "staff",
+      "image": "img_188_crop_1.jpg",
+      "path": "test/staff_images/img_188_crop_1.jpg",
+      "similarity": 0.4992576837539673
+    },
+    {
+      "category": "staff",
+      "image": "img_049_crop_0.jpg",
+      "path": "test/staff_images/img_049_crop_0.jpg",
+      "similarity": 0.49029606580734253
+    },
+    {
+      "category": "staff",
+      "image": "img_093_crop_1.jpg",
+      "path": "test/staff_images/img_093_crop_1.jpg",
+      "similarity": 0.3817211985588074
+    },
+    {
+      "category": "staff",
+      "image": "img_019_crop_0.jpg",
+      "path": "test/staff_images/img_019_crop_0.jpg",
+      "similarity": 0.5406600832939148
+    },
+    {
+      "category": "staff",
+      "image": "img_060_crop_0.jpg",
+      "path": "test/staff_images/img_060_crop_0.jpg",
+      "similarity": 0.5104938745498657
+    },
+    {
+      "category": "staff",
+      "image": "img_038_crop_0.jpg",
+      "path": "test/staff_images/img_038_crop_0.jpg",
+      "similarity": 0.4175165891647339
+    },
+    {
+      "category": "staff",
+      "image": "img_196_crop_1.jpg",
+      "path": "test/staff_images/img_196_crop_1.jpg",
+      "similarity": 0.4917261302471161
+    },
+    {
+      "category": "staff",
+      "image": "img_057_crop_0.jpg",
+      "path": "test/staff_images/img_057_crop_0.jpg",
+      "similarity": 0.47662732005119324
+    },
+    {
+      "category": "staff",
+      "image": "img_179_crop_1.jpg",
+      "path": "test/staff_images/img_179_crop_1.jpg",
+      "similarity": 0.4344481825828552
+    },
+    {
+      "category": "staff",
+      "image": "img_136_crop_0.jpg",
+      "path": "test/staff_images/img_136_crop_0.jpg",
+      "similarity": 0.4066801071166992
+    },
+    {
+      "category": "staff",
+      "image": "img_036_crop_1.jpg",
+      "path": "test/staff_images/img_036_crop_1.jpg",
+      "similarity": 0.4579293429851532
+    },
+    {
+      "category": "staff",
+      "image": "img_058_crop_0.jpg",
+      "path": "test/staff_images/img_058_crop_0.jpg",
+      "similarity": 0.33261197805404663
+    },
+    {
+      "category": "staff",
+      "image": "img_180_crop_1.jpg",
+      "path": "test/staff_images/img_180_crop_1.jpg",
+      "similarity": 0.44058892130851746
+    },
+    {
+      "category": "staff",
+      "image": "img_021_crop_0.jpg",
+      "path": "test/staff_images/img_021_crop_0.jpg",
+      "similarity": 0.3909461498260498
+    },
+    {
+      "category": "staff",
+      "image": "img_169_crop_0.jpg",
+      "path": "test/staff_images/img_169_crop_0.jpg",
+      "similarity": 0.6258633136749268
+    },
+    {
+      "category": "staff",
+      "image": "img_102_crop_0.jpg",
+      "path": "test/staff_images/img_102_crop_0.jpg",
+      "similarity": 0.37437111139297485
+    },
+    {
+      "category": "staff",
+      "image": "img_051_crop_0.jpg",
+      "path": "test/staff_images/img_051_crop_0.jpg",
+      "similarity": 0.4676389694213867
+    },
+    {
+      "category": "staff",
+      "image": "img_013_crop_0.jpg",
+      "path": "test/staff_images/img_013_crop_0.jpg",
+      "similarity": 0.3864099979400635
+    },
+    {
+      "category": "staff",
+      "image": "img_189_crop_0.jpg",
+      "path": "test/staff_images/img_189_crop_0.jpg",
+      "similarity": 0.48986631631851196
+    },
+    {
+      "category": "staff",
+      "image": "img_148_crop_0.jpg",
+      "path": "test/staff_images/img_148_crop_0.jpg",
+      "similarity": 0.5427929162979126
+    },
+    {
+      "category": "staff",
+      "image": "img_139_crop_1.jpg",
+      "path": "test/staff_images/img_139_crop_1.jpg",
+      "similarity": 0.507460355758667
+    },
+    {
+      "category": "staff",
+      "image": "img_088_crop_0.jpg",
+      "path": "test/staff_images/img_088_crop_0.jpg",
+      "similarity": 0.410174697637558
+    },
+    {
+      "category": "staff",
+      "image": "img_053_crop_0.jpg",
+      "path": "test/staff_images/img_053_crop_0.jpg",
+      "similarity": 0.4174339175224304
+    },
+    {
+      "category": "staff",
+      "image": "img_096_crop_2.jpg",
+      "path": "test/staff_images/img_096_crop_2.jpg",
+      "similarity": 0.43652868270874023
+    },
+    {
+      "category": "staff",
+      "image": "img_002_crop_0.jpg",
+      "path": "test/staff_images/img_002_crop_0.jpg",
+      "similarity": 0.4400574862957001
+    },
+    {
+      "category": "staff",
+      "image": "img_086_crop_0.jpg",
+      "path": "test/staff_images/img_086_crop_0.jpg",
+      "similarity": 0.35679352283477783
+    },
+    {
+      "category": "staff",
+      "image": "img_104_crop_1.jpg",
+      "path": "test/staff_images/img_104_crop_1.jpg",
+      "similarity": 0.42722344398498535
+    },
+    {
+      "category": "staff",
+      "image": "img_069_crop_1.jpg",
+      "path": "test/staff_images/img_069_crop_1.jpg",
+      "similarity": 0.5579925179481506
+    },
+    {
+      "category": "staff",
+      "image": "img_030_crop_1.jpg",
+      "path": "test/staff_images/img_030_crop_1.jpg",
+      "similarity": 0.43916791677474976
+    },
+    {
+      "category": "staff",
+      "image": "img_126_crop_0.jpg",
+      "path": "test/staff_images/img_126_crop_0.jpg",
+      "similarity": 0.47243356704711914
+    },
+    {
+      "category": "staff",
+      "image": "img_112_crop_0.jpg",
+      "path": "test/staff_images/img_112_crop_0.jpg",
+      "similarity": 0.4388936460018158
+    },
+    {
+      "category": "staff",
+      "image": "img_151_crop_1.jpg",
+      "path": "test/staff_images/img_151_crop_1.jpg",
+      "similarity": 0.41786277294158936
+    },
+    {
+      "category": "staff",
+      "image": "img_128_crop_0.jpg",
+      "path": "test/staff_images/img_128_crop_0.jpg",
+      "similarity": 0.4694889783859253
+    },
+    {
+      "category": "staff",
+      "image": "img_142_crop_1.jpg",
+      "path": "test/staff_images/img_142_crop_1.jpg",
+      "similarity": 0.4160741865634918
+    },
+    {
+      "category": "staff",
+      "image": "img_139_crop_0.jpg",
+      "path": "test/staff_images/img_139_crop_0.jpg",
+      "similarity": 0.5916036367416382
+    },
+    {
+      "category": "staff",
+      "image": "img_132_crop_0.jpg",
+      "path": "test/staff_images/img_132_crop_0.jpg",
+      "similarity": 0.5283938646316528
+    },
+    {
+      "category": "staff",
+      "image": "img_096_crop_1.jpg",
+      "path": "test/staff_images/img_096_crop_1.jpg",
+      "similarity": 0.4911714792251587
+    },
+    {
+      "category": "staff",
+      "image": "img_094_crop_0.jpg",
+      "path": "test/staff_images/img_094_crop_0.jpg",
+      "similarity": 0.5475015044212341
+    },
+    {
+      "category": "staff",
+      "image": "img_023_crop_1.jpg",
+      "path": "test/staff_images/img_023_crop_1.jpg",
+      "similarity": 0.42300909757614136
+    },
+    {
+      "category": "staff",
+      "image": "img_050_crop_1.jpg",
+      "path": "test/staff_images/img_050_crop_1.jpg",
+      "similarity": 0.43411093950271606
+    },
+    {
+      "category": "staff",
+      "image": "img_010_crop_0.jpg",
+      "path": "test/staff_images/img_010_crop_0.jpg",
+      "similarity": 0.3971879184246063
+    },
+    {
+      "category": "staff",
+      "image": "img_162_crop_0.jpg",
+      "path": "test/staff_images/img_162_crop_0.jpg",
+      "similarity": 0.4586692750453949
+    },
+    {
+      "category": "staff",
+      "image": "img_123_crop_2.jpg",
+      "path": "test/staff_images/img_123_crop_2.jpg",
+      "similarity": 0.49383479356765747
+    },
+    {
+      "category": "staff",
+      "image": "img_162_crop_1.jpg",
+      "path": "test/staff_images/img_162_crop_1.jpg",
+      "similarity": 0.4747031629085541
+    },
+    {
+      "category": "staff",
+      "image": "img_135_crop_0.jpg",
+      "path": "test/staff_images/img_135_crop_0.jpg",
+      "similarity": 0.4681876599788666
+    },
+    {
+      "category": "staff",
+      "image": "img_023_crop_0.jpg",
+      "path": "test/staff_images/img_023_crop_0.jpg",
+      "similarity": 0.4114678204059601
+    },
+    {
+      "category": "staff",
+      "image": "img_077_crop_1.jpg",
+      "path": "test/staff_images/img_077_crop_1.jpg",
+      "similarity": 0.400970995426178
+    },
+    {
+      "category": "staff",
+      "image": "img_166_crop_0.jpg",
+      "path": "test/staff_images/img_166_crop_0.jpg",
+      "similarity": 0.45069676637649536
+    },
+    {
+      "category": "staff",
+      "image": "img_151_crop_0.jpg",
+      "path": "test/staff_images/img_151_crop_0.jpg",
+      "similarity": 0.405825674533844
+    },
+    {
+      "category": "staff",
+      "image": "img_141_crop_0.jpg",
+      "path": "test/staff_images/img_141_crop_0.jpg",
+      "similarity": 0.47332918643951416
+    },
+    {
+      "category": "staff",
+      "image": "img_127_crop_1.jpg",
+      "path": "test/staff_images/img_127_crop_1.jpg",
+      "similarity": 0.44131147861480713
+    },
+    {
+      "category": "staff",
+      "image": "img_065_crop_0.jpg",
+      "path": "test/staff_images/img_065_crop_0.jpg",
+      "similarity": 0.40275609493255615
+    },
+    {
+      "category": "staff",
+      "image": "img_107_crop_0.jpg",
+      "path": "test/staff_images/img_107_crop_0.jpg",
+      "similarity": 0.4638916850090027
+    },
+    {
+      "category": "staff",
+      "image": "img_083_crop_0.jpg",
+      "path": "test/staff_images/img_083_crop_0.jpg",
+      "similarity": 0.3851412236690521
+    },
+    {
+      "category": "staff",
+      "image": "img_087_crop_0.jpg",
+      "path": "test/staff_images/img_087_crop_0.jpg",
+      "similarity": 0.5562183260917664
+    },
+    {
+      "category": "staff",
+      "image": "img_111_crop_0.jpg",
+      "path": "test/staff_images/img_111_crop_0.jpg",
+      "similarity": 0.35365837812423706
+    },
+    {
+      "category": "staff",
+      "image": "img_095_crop_0.jpg",
+      "path": "test/staff_images/img_095_crop_0.jpg",
+      "similarity": 0.3856673538684845
+    },
+    {
+      "category": "staff",
+      "image": "img_006_crop_0.jpg",
+      "path": "test/staff_images/img_006_crop_0.jpg",
+      "similarity": 0.3731454014778137
+    },
+    {
+      "category": "staff",
+      "image": "img_123_crop_0.jpg",
+      "path": "test/staff_images/img_123_crop_0.jpg",
+      "similarity": 0.5028246641159058
+    },
+    {
+      "category": "staff",
+      "image": "img_037_crop_1.jpg",
+      "path": "test/staff_images/img_037_crop_1.jpg",
+      "similarity": 0.612410306930542
+    },
+    {
+      "category": "staff",
+      "image": "img_160_crop_0.jpg",
+      "path": "test/staff_images/img_160_crop_0.jpg",
+      "similarity": 0.5142878293991089
+    },
+    {
+      "category": "staff",
+      "image": "img_029_crop_0.jpg",
+      "path": "test/staff_images/img_029_crop_0.jpg",
+      "similarity": 0.45544928312301636
+    },
+    {
+      "category": "staff",
+      "image": "img_155_crop_0.jpg",
+      "path": "test/staff_images/img_155_crop_0.jpg",
+      "similarity": 0.4478199779987335
+    },
+    {
+      "category": "staff",
+      "image": "img_196_crop_0.jpg",
+      "path": "test/staff_images/img_196_crop_0.jpg",
+      "similarity": 0.45754724740982056
+    },
+    {
+      "category": "staff",
+      "image": "img_150_crop_0.jpg",
+      "path": "test/staff_images/img_150_crop_0.jpg",
+      "similarity": 0.4078199565410614
+    },
+    {
+      "category": "staff",
+      "image": "img_124_crop_0.jpg",
+      "path": "test/staff_images/img_124_crop_0.jpg",
+      "similarity": 0.4790687561035156
+    },
+    {
+      "category": "staff",
+      "image": "img_182_crop_0.jpg",
+      "path": "test/staff_images/img_182_crop_0.jpg",
+      "similarity": 0.5383527278900146
+    },
+    {
+      "category": "staff",
+      "image": "img_176_crop_0.jpg",
+      "path": "test/staff_images/img_176_crop_0.jpg",
+      "similarity": 0.4245833158493042
+    },
+    {
+      "category": "staff",
+      "image": "img_110_crop_0.jpg",
+      "path": "test/staff_images/img_110_crop_0.jpg",
+      "similarity": 0.42208561301231384
+    },
+    {
+      "category": "staff",
+      "image": "img_043_crop_0.jpg",
+      "path": "test/staff_images/img_043_crop_0.jpg",
+      "similarity": 0.3900243639945984
+    },
+    {
+      "category": "staff",
+      "image": "img_104_crop_0.jpg",
+      "path": "test/staff_images/img_104_crop_0.jpg",
+      "similarity": 0.4330271780490875
+    },
+    {
+      "category": "staff",
+      "image": "img_047_crop_1.jpg",
+      "path": "test/staff_images/img_047_crop_1.jpg",
+      "similarity": 0.5986039638519287
+    },
+    {
+      "category": "staff",
+      "image": "img_072_crop_0.jpg",
+      "path": "test/staff_images/img_072_crop_0.jpg",
+      "similarity": 0.3612506687641144
+    },
+    {
+      "category": "staff",
+      "image": "img_075_crop_0.jpg",
+      "path": "test/staff_images/img_075_crop_0.jpg",
+      "similarity": 0.44914525747299194
+    },
+    {
+      "category": "staff",
+      "image": "img_035_crop_1.jpg",
+      "path": "test/staff_images/img_035_crop_1.jpg",
+      "similarity": 0.4225371778011322
+    },
+    {
+      "category": "staff",
+      "image": "img_099_crop_0.jpg",
+      "path": "test/staff_images/img_099_crop_0.jpg",
+      "similarity": 0.36952632665634155
+    },
+    {
+      "category": "staff",
+      "image": "img_171_crop_0.jpg",
+      "path": "test/staff_images/img_171_crop_0.jpg",
+      "similarity": 0.41831260919570923
+    },
+    {
+      "category": "staff",
+      "image": "img_040_crop_1.jpg",
+      "path": "test/staff_images/img_040_crop_1.jpg",
+      "similarity": 0.48043182492256165
+    },
+    {
+      "category": "staff",
+      "image": "img_008_crop_0.jpg",
+      "path": "test/staff_images/img_008_crop_0.jpg",
+      "similarity": 0.39086559414863586
+    },
+    {
+      "category": "staff",
+      "image": "img_068_crop_0.jpg",
+      "path": "test/staff_images/img_068_crop_0.jpg",
+      "similarity": 0.4009386897087097
+    },
+    {
+      "category": "staff",
+      "image": "img_138_crop_0.jpg",
+      "path": "test/staff_images/img_138_crop_0.jpg",
+      "similarity": 0.46300092339515686
+    },
+    {
+      "category": "staff",
+      "image": "img_074_crop_0.jpg",
+      "path": "test/staff_images/img_074_crop_0.jpg",
+      "similarity": 0.4385804235935211
+    },
+    {
+      "category": "staff",
+      "image": "img_152_crop_0.jpg",
+      "path": "test/staff_images/img_152_crop_0.jpg",
+      "similarity": 0.5001853704452515
+    },
+    {
+      "category": "staff",
+      "image": "img_001_crop_1.jpg",
+      "path": "test/staff_images/img_001_crop_1.jpg",
+      "similarity": 0.505101203918457
+    },
+    {
+      "category": "staff",
+      "image": "img_166_crop_1.jpg",
+      "path": "test/staff_images/img_166_crop_1.jpg",
+      "similarity": 0.41989532113075256
+    },
+    {
+      "category": "staff",
+      "image": "img_076_crop_1.jpg",
+      "path": "test/staff_images/img_076_crop_1.jpg",
+      "similarity": 0.43298935890197754
+    },
+    {
+      "category": "staff",
+      "image": "img_175_crop_1.jpg",
+      "path": "test/staff_images/img_175_crop_1.jpg",
+      "similarity": 0.4885251224040985
+    },
+    {
+      "category": "staff",
+      "image": "img_018_crop_0.jpg",
+      "path": "test/staff_images/img_018_crop_0.jpg",
+      "similarity": 0.36684277653694153
+    },
+    {
+      "category": "staff",
+      "image": "img_048_crop_0.jpg",
+      "path": "test/staff_images/img_048_crop_0.jpg",
+      "similarity": 0.46226125955581665
+    },
+    {
+      "category": "staff",
+      "image": "img_175_crop_0.jpg",
+      "path": "test/staff_images/img_175_crop_0.jpg",
+      "similarity": 0.38296085596084595
+    },
+    {
+      "category": "staff",
+      "image": "img_096_crop_0.jpg",
+      "path": "test/staff_images/img_096_crop_0.jpg",
+      "similarity": 0.3858141303062439
+    },
+    {
+      "category": "staff",
+      "image": "img_117_crop_0.jpg",
+      "path": "test/staff_images/img_117_crop_0.jpg",
+      "similarity": 0.41438156366348267
+    },
+    {
+      "category": "staff",
+      "image": "img_181_crop_0.jpg",
+      "path": "test/staff_images/img_181_crop_0.jpg",
+      "similarity": 0.42594897747039795
+    },
+    {
+      "category": "staff",
+      "image": "img_193_crop_0.jpg",
+      "path": "test/staff_images/img_193_crop_0.jpg",
+      "similarity": 0.5485230684280396
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032887_crop_0.jpg",
+      "path": "test/non_staff_images/000000032887_crop_0.jpg",
+      "similarity": 0.47612670063972473
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033368_crop_0.jpg",
+      "path": "test/non_staff_images/000000033368_crop_0.jpg",
+      "similarity": 0.4306873083114624
+    },
+    {
+      "category": "non_staff",
+      "image": "000000054654_crop_0.jpg",
+      "path": "test/non_staff_images/000000054654_crop_0.jpg",
+      "similarity": 0.37628883123397827
+    },
+    {
+      "category": "non_staff",
+      "image": "000000003156_crop_0.jpg",
+      "path": "test/non_staff_images/000000003156_crop_0.jpg",
+      "similarity": 0.4264834225177765
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013177_crop_0.jpg",
+      "path": "test/non_staff_images/000000013177_crop_0.jpg",
+      "similarity": 0.3965228497982025
+    },
+    {
+      "category": "non_staff",
+      "image": "000000012120_crop_0.jpg",
+      "path": "test/non_staff_images/000000012120_crop_0.jpg",
+      "similarity": 0.396720826625824
+    },
+    {
+      "category": "non_staff",
+      "image": "000000036936_crop_0.jpg",
+      "path": "test/non_staff_images/000000036936_crop_0.jpg",
+      "similarity": 0.4008062183856964
+    },
+    {
+      "category": "non_staff",
+      "image": "000000029187_crop_0.jpg",
+      "path": "test/non_staff_images/000000029187_crop_0.jpg",
+      "similarity": 0.3477466404438019
+    },
+    {
+      "category": "non_staff",
+      "image": "000000052007_crop_0.jpg",
+      "path": "test/non_staff_images/000000052007_crop_0.jpg",
+      "similarity": 0.5866663455963135
+    },
+    {
+      "category": "non_staff",
+      "image": "000000044195_crop_1.jpg",
+      "path": "test/non_staff_images/000000044195_crop_1.jpg",
+      "similarity": 0.421561062335968
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009590_crop_0.jpg",
+      "path": "test/non_staff_images/000000009590_crop_0.jpg",
+      "similarity": 0.38046425580978394
+    },
+    {
+      "category": "non_staff",
+      "image": "000000038678_crop_0.jpg",
+      "path": "test/non_staff_images/000000038678_crop_0.jpg",
+      "similarity": 0.25662991404533386
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009483_crop_0.jpg",
+      "path": "test/non_staff_images/000000009483_crop_0.jpg",
+      "similarity": 0.47176945209503174
+    },
+    {
+      "category": "non_staff",
+      "image": "000000048396_crop_1.jpg",
+      "path": "test/non_staff_images/000000048396_crop_1.jpg",
+      "similarity": 0.44512414932250977
+    },
+    {
+      "category": "non_staff",
+      "image": "000000008211_crop_1.jpg",
+      "path": "test/non_staff_images/000000008211_crop_1.jpg",
+      "similarity": 0.5023536682128906
+    },
+    {
+      "category": "non_staff",
+      "image": "000000040083_crop_0.jpg",
+      "path": "test/non_staff_images/000000040083_crop_0.jpg",
+      "similarity": 0.45340707898139954
+    },
+    {
+      "category": "non_staff",
+      "image": "000000052591_crop_0.jpg",
+      "path": "test/non_staff_images/000000052591_crop_0.jpg",
+      "similarity": 0.40375882387161255
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001000_crop_2.jpg",
+      "path": "test/non_staff_images/000000001000_crop_2.jpg",
+      "similarity": 0.44443100690841675
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033104_crop_1.jpg",
+      "path": "test/non_staff_images/000000033104_crop_1.jpg",
+      "similarity": 0.3545587658882141
+    },
+    {
+      "category": "non_staff",
+      "image": "000000018491_crop_2.jpg",
+      "path": "test/non_staff_images/000000018491_crop_2.jpg",
+      "similarity": 0.4053437113761902
+    },
+    {
+      "category": "non_staff",
+      "image": "000000004765_crop_0.jpg",
+      "path": "test/non_staff_images/000000004765_crop_0.jpg",
+      "similarity": 0.42876970767974854
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006894_crop_0.jpg",
+      "path": "test/non_staff_images/000000006894_crop_0.jpg",
+      "similarity": 0.36127322912216187
+    },
+    {
+      "category": "non_staff",
+      "image": "000000011699_crop_1.jpg",
+      "path": "test/non_staff_images/000000011699_crop_1.jpg",
+      "similarity": 0.3742518424987793
+    },
+    {
+      "category": "non_staff",
+      "image": "000000047819_crop_0.jpg",
+      "path": "test/non_staff_images/000000047819_crop_0.jpg",
+      "similarity": 0.4211277961730957
+    },
+    {
+      "category": "non_staff",
+      "image": "000000039480_crop_0.jpg",
+      "path": "test/non_staff_images/000000039480_crop_0.jpg",
+      "similarity": 0.2622445225715637
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001268_crop_1.jpg",
+      "path": "test/non_staff_images/000000001268_crop_1.jpg",
+      "similarity": 0.5442184805870056
+    },
+    {
+      "category": "non_staff",
+      "image": "000000041990_crop_0.jpg",
+      "path": "test/non_staff_images/000000041990_crop_0.jpg",
+      "similarity": 0.4387494921684265
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001268_crop_2.jpg",
+      "path": "test/non_staff_images/000000001268_crop_2.jpg",
+      "similarity": 0.43757838010787964
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032817_crop_0.jpg",
+      "path": "test/non_staff_images/000000032817_crop_0.jpg",
+      "similarity": 0.49657219648361206
+    },
+    {
+      "category": "non_staff",
+      "image": "000000021879_crop_1.jpg",
+      "path": "test/non_staff_images/000000021879_crop_1.jpg",
+      "similarity": 0.4309840798377991
+    },
+    {
+      "category": "non_staff",
+      "image": "000000021167_crop_1.jpg",
+      "path": "test/non_staff_images/000000021167_crop_1.jpg",
+      "similarity": 0.5191017985343933
+    },
+    {
+      "category": "non_staff",
+      "image": "000000007977_crop_0.jpg",
+      "path": "test/non_staff_images/000000007977_crop_0.jpg",
+      "similarity": 0.541266679763794
+    },
+    {
+      "category": "non_staff",
+      "image": "000000012120_crop_2.jpg",
+      "path": "test/non_staff_images/000000012120_crop_2.jpg",
+      "similarity": 0.28577059507369995
+    },
+    {
+      "category": "non_staff",
+      "image": "000000038829_crop_2.jpg",
+      "path": "test/non_staff_images/000000038829_crop_2.jpg",
+      "similarity": 0.49862968921661377
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006471_crop_1.jpg",
+      "path": "test/non_staff_images/000000006471_crop_1.jpg",
+      "similarity": 0.4416126608848572
+    },
+    {
+      "category": "non_staff",
+      "image": "000000057597_crop_1.jpg",
+      "path": "test/non_staff_images/000000057597_crop_1.jpg",
+      "similarity": 0.3076982796192169
+    },
+    {
+      "category": "non_staff",
+      "image": "000000005060_crop_0.jpg",
+      "path": "test/non_staff_images/000000005060_crop_0.jpg",
+      "similarity": 0.4607292413711548
+    },
+    {
+      "category": "non_staff",
+      "image": "000000038118_crop_0.jpg",
+      "path": "test/non_staff_images/000000038118_crop_0.jpg",
+      "similarity": 0.44044068455696106
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013659_crop_1.jpg",
+      "path": "test/non_staff_images/000000013659_crop_1.jpg",
+      "similarity": 0.43579769134521484
+    },
+    {
+      "category": "non_staff",
+      "image": "000000031217_crop_0.jpg",
+      "path": "test/non_staff_images/000000031217_crop_0.jpg",
+      "similarity": 0.4917526841163635
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013291_crop_0.jpg",
+      "path": "test/non_staff_images/000000013291_crop_0.jpg",
+      "similarity": 0.4664977490901947
+    },
+    {
+      "category": "non_staff",
+      "image": "000000016249_crop_0.jpg",
+      "path": "test/non_staff_images/000000016249_crop_0.jpg",
+      "similarity": 0.525618851184845
+    },
+    {
+      "category": "non_staff",
+      "image": "000000031093_crop_0.jpg",
+      "path": "test/non_staff_images/000000031093_crop_0.jpg",
+      "similarity": 0.461209237575531
+    },
+    {
+      "category": "non_staff",
+      "image": "000000019432_crop_0.jpg",
+      "path": "test/non_staff_images/000000019432_crop_0.jpg",
+      "similarity": 0.4009780287742615
+    },
+    {
+      "category": "non_staff",
+      "image": "000000046252_crop_2.jpg",
+      "path": "test/non_staff_images/000000046252_crop_2.jpg",
+      "similarity": 0.4154915511608124
+    },
+    {
+      "category": "non_staff",
+      "image": "000000022935_crop_0.jpg",
+      "path": "test/non_staff_images/000000022935_crop_0.jpg",
+      "similarity": 0.47409194707870483
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013729_crop_2.jpg",
+      "path": "test/non_staff_images/000000013729_crop_2.jpg",
+      "similarity": 0.5366929173469543
+    },
+    {
+      "category": "non_staff",
+      "image": "000000040083_crop_1.jpg",
+      "path": "test/non_staff_images/000000040083_crop_1.jpg",
+      "similarity": 0.39638954401016235
+    },
+    {
+      "category": "non_staff",
+      "image": "000000051976_crop_0.jpg",
+      "path": "test/non_staff_images/000000051976_crop_0.jpg",
+      "similarity": 0.4646804630756378
+    },
+    {
+      "category": "non_staff",
+      "image": "000000018837_crop_0.jpg",
+      "path": "test/non_staff_images/000000018837_crop_0.jpg",
+      "similarity": 0.427880197763443
+    },
+    {
+      "category": "non_staff",
+      "image": "000000014226_crop_0.jpg",
+      "path": "test/non_staff_images/000000014226_crop_0.jpg",
+      "similarity": 0.42480701208114624
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033759_crop_0.jpg",
+      "path": "test/non_staff_images/000000033759_crop_0.jpg",
+      "similarity": 0.37192463874816895
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032901_crop_2.jpg",
+      "path": "test/non_staff_images/000000032901_crop_2.jpg",
+      "similarity": 0.3623376786708832
+    },
+    {
+      "category": "non_staff",
+      "image": "000000014439_crop_3.jpg",
+      "path": "test/non_staff_images/000000014439_crop_3.jpg",
+      "similarity": 0.45952898263931274
+    },
+    {
+      "category": "non_staff",
+      "image": "000000016249_crop_2.jpg",
+      "path": "test/non_staff_images/000000016249_crop_2.jpg",
+      "similarity": 0.44208991527557373
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009590_crop_2.jpg",
+      "path": "test/non_staff_images/000000009590_crop_2.jpg",
+      "similarity": 0.44704970717430115
+    },
+    {
+      "category": "non_staff",
+      "image": "000000010707_crop_0.jpg",
+      "path": "test/non_staff_images/000000010707_crop_0.jpg",
+      "similarity": 0.5199102759361267
+    },
+    {
+      "category": "non_staff",
+      "image": "000000052507_crop_0.jpg",
+      "path": "test/non_staff_images/000000052507_crop_0.jpg",
+      "similarity": 0.48053687810897827
+    },
+    {
+      "category": "non_staff",
+      "image": "000000046872_crop_1.jpg",
+      "path": "test/non_staff_images/000000046872_crop_1.jpg",
+      "similarity": 0.3629169464111328
+    },
+    {
+      "category": "non_staff",
+      "image": "000000020333_crop_0.jpg",
+      "path": "test/non_staff_images/000000020333_crop_0.jpg",
+      "similarity": 0.45743298530578613
+    },
+    {
+      "category": "non_staff",
+      "image": "000000025424_crop_0.jpg",
+      "path": "test/non_staff_images/000000025424_crop_0.jpg",
+      "similarity": 0.36785879731178284
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006763_crop_0.jpg",
+      "path": "test/non_staff_images/000000006763_crop_0.jpg",
+      "similarity": 0.40967828035354614
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001000_crop_4.jpg",
+      "path": "test/non_staff_images/000000001000_crop_4.jpg",
+      "similarity": 0.46408310532569885
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006771_crop_1.jpg",
+      "path": "test/non_staff_images/000000006771_crop_1.jpg",
+      "similarity": 0.3228672742843628
+    },
+    {
+      "category": "non_staff",
+      "image": "000000015597_crop_0.jpg",
+      "path": "test/non_staff_images/000000015597_crop_0.jpg",
+      "similarity": 0.4921618700027466
+    },
+    {
+      "category": "non_staff",
+      "image": "000000004134_crop_0.jpg",
+      "path": "test/non_staff_images/000000004134_crop_0.jpg",
+      "similarity": 0.2799273133277893
+    },
+    {
+      "category": "non_staff",
+      "image": "000000038829_crop_0.jpg",
+      "path": "test/non_staff_images/000000038829_crop_0.jpg",
+      "similarity": 0.4122133255004883
+    },
+    {
+      "category": "non_staff",
+      "image": "000000022935_crop_1.jpg",
+      "path": "test/non_staff_images/000000022935_crop_1.jpg",
+      "similarity": 0.1494460105895996
+    },
+    {
+      "category": "non_staff",
+      "image": "000000003934_crop_0.jpg",
+      "path": "test/non_staff_images/000000003934_crop_0.jpg",
+      "similarity": 0.35703086853027344
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013546_crop_0.jpg",
+      "path": "test/non_staff_images/000000013546_crop_0.jpg",
+      "similarity": 0.4958350956439972
+    },
+    {
+      "category": "non_staff",
+      "image": "000000005193_crop_3.jpg",
+      "path": "test/non_staff_images/000000005193_crop_3.jpg",
+      "similarity": 0.4118092358112335
+    },
+    {
+      "category": "non_staff",
+      "image": "000000010707_crop_1.jpg",
+      "path": "test/non_staff_images/000000010707_crop_1.jpg",
+      "similarity": 0.417408287525177
+    },
+    {
+      "category": "non_staff",
+      "image": "000000046252_crop_0.jpg",
+      "path": "test/non_staff_images/000000046252_crop_0.jpg",
+      "similarity": 0.386594295501709
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009400_crop_0.jpg",
+      "path": "test/non_staff_images/000000009400_crop_0.jpg",
+      "similarity": 0.3639281392097473
+    },
+    {
+      "category": "non_staff",
+      "image": "000000002532_crop_0.jpg",
+      "path": "test/non_staff_images/000000002532_crop_0.jpg",
+      "similarity": 0.4839441478252411
+    },
+    {
+      "category": "non_staff",
+      "image": "000000025228_crop_0.jpg",
+      "path": "test/non_staff_images/000000025228_crop_0.jpg",
+      "similarity": 0.38563835620880127
+    },
+    {
+      "category": "non_staff",
+      "image": "000000037988_crop_0.jpg",
+      "path": "test/non_staff_images/000000037988_crop_0.jpg",
+      "similarity": 0.3612827658653259
+    },
+    {
+      "category": "non_staff",
+      "image": "000000053626_crop_2.jpg",
+      "path": "test/non_staff_images/000000053626_crop_2.jpg",
+      "similarity": 0.4869912266731262
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001000_crop_1.jpg",
+      "path": "test/non_staff_images/000000001000_crop_1.jpg",
+      "similarity": 0.44041383266448975
+    },
+    {
+      "category": "non_staff",
+      "image": "000000018519_crop_0.jpg",
+      "path": "test/non_staff_images/000000018519_crop_0.jpg",
+      "similarity": 0.4412481188774109
+    },
+    {
+      "category": "non_staff",
+      "image": "000000027186_crop_0.jpg",
+      "path": "test/non_staff_images/000000027186_crop_0.jpg",
+      "similarity": 0.4966580867767334
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032334_crop_1.jpg",
+      "path": "test/non_staff_images/000000032334_crop_1.jpg",
+      "similarity": 0.47202807664871216
+    },
+    {
+      "category": "non_staff",
+      "image": "000000002261_crop_0.jpg",
+      "path": "test/non_staff_images/000000002261_crop_0.jpg",
+      "similarity": 0.47054415941238403
+    },
+    {
+      "category": "non_staff",
+      "image": "000000012280_crop_0.jpg",
+      "path": "test/non_staff_images/000000012280_crop_0.jpg",
+      "similarity": 0.5346808433532715
+    },
+    {
+      "category": "non_staff",
+      "image": "000000007511_crop_0.jpg",
+      "path": "test/non_staff_images/000000007511_crop_0.jpg",
+      "similarity": 0.4640551805496216
+    },
+    {
+      "category": "non_staff",
+      "image": "000000005001_crop_0.jpg",
+      "path": "test/non_staff_images/000000005001_crop_0.jpg",
+      "similarity": 0.3924983739852905
+    },
+    {
+      "category": "non_staff",
+      "image": "000000049259_crop_0.jpg",
+      "path": "test/non_staff_images/000000049259_crop_0.jpg",
+      "similarity": 0.40654999017715454
+    },
+    {
+      "category": "non_staff",
+      "image": "000000014439_crop_0.jpg",
+      "path": "test/non_staff_images/000000014439_crop_0.jpg",
+      "similarity": 0.4650588631629944
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033221_crop_4.jpg",
+      "path": "test/non_staff_images/000000033221_crop_4.jpg",
+      "similarity": 0.4516685903072357
+    },
+    {
+      "category": "non_staff",
+      "image": "000000000785_crop_0.jpg",
+      "path": "test/non_staff_images/000000000785_crop_0.jpg",
+      "similarity": 0.44180119037628174
+    },
+    {
+      "category": "non_staff",
+      "image": "000000014439_crop_1.jpg",
+      "path": "test/non_staff_images/000000014439_crop_1.jpg",
+      "similarity": 0.49196338653564453
+    },
+    {
+      "category": "non_staff",
+      "image": "000000054593_crop_2.jpg",
+      "path": "test/non_staff_images/000000054593_crop_2.jpg",
+      "similarity": 0.3758988678455353
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033221_crop_3.jpg",
+      "path": "test/non_staff_images/000000033221_crop_3.jpg",
+      "similarity": 0.5007050037384033
+    },
+    {
+      "category": "non_staff",
+      "image": "000000054593_crop_1.jpg",
+      "path": "test/non_staff_images/000000054593_crop_1.jpg",
+      "similarity": 0.4546542167663574
+    },
+    {
+      "category": "non_staff",
+      "image": "000000011197_crop_0.jpg",
+      "path": "test/non_staff_images/000000011197_crop_0.jpg",
+      "similarity": 0.5537090301513672
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032901_crop_3.jpg",
+      "path": "test/non_staff_images/000000032901_crop_3.jpg",
+      "similarity": 0.347323477268219
+    },
+    {
+      "category": "non_staff",
+      "image": "000000031620_crop_0.jpg",
+      "path": "test/non_staff_images/000000031620_crop_0.jpg",
+      "similarity": 0.5325307250022888
+    },
+    {
+      "category": "non_staff",
+      "image": "000000052007_crop_1.jpg",
+      "path": "test/non_staff_images/000000052007_crop_1.jpg",
+      "similarity": 0.45888230204582214
+    },
+    {
+      "category": "non_staff",
+      "image": "000000048396_crop_0.jpg",
+      "path": "test/non_staff_images/000000048396_crop_0.jpg",
+      "similarity": 0.45030704140663147
+    },
+    {
+      "category": "non_staff",
+      "image": "000000021839_crop_0.jpg",
+      "path": "test/non_staff_images/000000021839_crop_0.jpg",
+      "similarity": 0.5042181015014648
+    },
+    {
+      "category": "non_staff",
+      "image": "000000017905_crop_0.jpg",
+      "path": "test/non_staff_images/000000017905_crop_0.jpg",
+      "similarity": 0.5284748077392578
+    },
+    {
+      "category": "non_staff",
+      "image": "000000041990_crop_2.jpg",
+      "path": "test/non_staff_images/000000041990_crop_2.jpg",
+      "similarity": 0.44087880849838257
+    },
+    {
+      "category": "non_staff",
+      "image": "000000039951_crop_0.jpg",
+      "path": "test/non_staff_images/000000039951_crop_0.jpg",
+      "similarity": 0.43980279564857483
+    },
+    {
+      "category": "non_staff",
+      "image": "000000011051_crop_0.jpg",
+      "path": "test/non_staff_images/000000011051_crop_0.jpg",
+      "similarity": 0.3252469599246979
+    },
+    {
+      "category": "non_staff",
+      "image": "000000050145_crop_0.jpg",
+      "path": "test/non_staff_images/000000050145_crop_0.jpg",
+      "similarity": 0.41074079275131226
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033221_crop_0.jpg",
+      "path": "test/non_staff_images/000000033221_crop_0.jpg",
+      "similarity": 0.42739224433898926
+    },
+    {
+      "category": "non_staff",
+      "image": "000000034139_crop_1.jpg",
+      "path": "test/non_staff_images/000000034139_crop_1.jpg",
+      "similarity": 0.5526443719863892
+    },
+    {
+      "category": "non_staff",
+      "image": "000000025386_crop_0.jpg",
+      "path": "test/non_staff_images/000000025386_crop_0.jpg",
+      "similarity": 0.4013594388961792
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006471_crop_0.jpg",
+      "path": "test/non_staff_images/000000006471_crop_0.jpg",
+      "similarity": 0.31344789266586304
+    },
+    {
+      "category": "non_staff",
+      "image": "000000011051_crop_1.jpg",
+      "path": "test/non_staff_images/000000011051_crop_1.jpg",
+      "similarity": 0.39205196499824524
+    },
+    {
+      "category": "non_staff",
+      "image": "000000052996_crop_0.jpg",
+      "path": "test/non_staff_images/000000052996_crop_0.jpg",
+      "similarity": 0.5047652721405029
+    },
+    {
+      "category": "non_staff",
+      "image": "000000038829_crop_1.jpg",
+      "path": "test/non_staff_images/000000038829_crop_1.jpg",
+      "similarity": 0.47045251727104187
+    },
+    {
+      "category": "non_staff",
+      "image": "000000011699_crop_0.jpg",
+      "path": "test/non_staff_images/000000011699_crop_0.jpg",
+      "similarity": 0.484075665473938
+    },
+    {
+      "category": "non_staff",
+      "image": "000000017436_crop_0.jpg",
+      "path": "test/non_staff_images/000000017436_crop_0.jpg",
+      "similarity": 0.43398863077163696
+    },
+    {
+      "category": "non_staff",
+      "image": "000000039551_crop_0.jpg",
+      "path": "test/non_staff_images/000000039551_crop_0.jpg",
+      "similarity": 0.35427114367485046
+    },
+    {
+      "category": "non_staff",
+      "image": "000000000885_crop_1.jpg",
+      "path": "test/non_staff_images/000000000885_crop_1.jpg",
+      "similarity": 0.4974146783351898
+    },
+    {
+      "category": "non_staff",
+      "image": "000000018491_crop_0.jpg",
+      "path": "test/non_staff_images/000000018491_crop_0.jpg",
+      "similarity": 0.42170125246047974
+    },
+    {
+      "category": "non_staff",
+      "image": "000000005193_crop_0.jpg",
+      "path": "test/non_staff_images/000000005193_crop_0.jpg",
+      "similarity": 0.40675076842308044
+    },
+    {
+      "category": "non_staff",
+      "image": "000000008690_crop_1.jpg",
+      "path": "test/non_staff_images/000000008690_crop_1.jpg",
+      "similarity": 0.33710339665412903
+    },
+    {
+      "category": "non_staff",
+      "image": "000000044279_crop_0.jpg",
+      "path": "test/non_staff_images/000000044279_crop_0.jpg",
+      "similarity": 0.4113456904888153
+    },
+    {
+      "category": "non_staff",
+      "image": "000000050811_crop_0.jpg",
+      "path": "test/non_staff_images/000000050811_crop_0.jpg",
+      "similarity": 0.2979447543621063
+    },
+    {
+      "category": "non_staff",
+      "image": "000000054592_crop_0.jpg",
+      "path": "test/non_staff_images/000000054592_crop_0.jpg",
+      "similarity": 0.4394274353981018
+    },
+    {
+      "category": "non_staff",
+      "image": "000000044279_crop_1.jpg",
+      "path": "test/non_staff_images/000000044279_crop_1.jpg",
+      "similarity": 0.4456273019313812
+    },
+    {
+      "category": "non_staff",
+      "image": "000000012639_crop_2.jpg",
+      "path": "test/non_staff_images/000000012639_crop_2.jpg",
+      "similarity": 0.5361641049385071
+    },
+    {
+      "category": "non_staff",
+      "image": "000000021167_crop_0.jpg",
+      "path": "test/non_staff_images/000000021167_crop_0.jpg",
+      "similarity": 0.496833860874176
+    },
+    {
+      "category": "non_staff",
+      "image": "000000022705_crop_0.jpg",
+      "path": "test/non_staff_images/000000022705_crop_0.jpg",
+      "similarity": 0.4536118507385254
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009400_crop_2.jpg",
+      "path": "test/non_staff_images/000000009400_crop_2.jpg",
+      "similarity": 0.4063621759414673
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032887_crop_1.jpg",
+      "path": "test/non_staff_images/000000032887_crop_1.jpg",
+      "similarity": 0.4702187478542328
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009400_crop_1.jpg",
+      "path": "test/non_staff_images/000000009400_crop_1.jpg",
+      "similarity": 0.43116500973701477
+    },
+    {
+      "category": "non_staff",
+      "image": "000000051610_crop_0.jpg",
+      "path": "test/non_staff_images/000000051610_crop_0.jpg",
+      "similarity": 0.4583350419998169
+    },
+    {
+      "category": "non_staff",
+      "image": "000000047585_crop_1.jpg",
+      "path": "test/non_staff_images/000000047585_crop_1.jpg",
+      "similarity": 0.4358503222465515
+    },
+    {
+      "category": "non_staff",
+      "image": "000000041990_crop_1.jpg",
+      "path": "test/non_staff_images/000000041990_crop_1.jpg",
+      "similarity": 0.4548593759536743
+    },
+    {
+      "category": "non_staff",
+      "image": "000000046872_crop_0.jpg",
+      "path": "test/non_staff_images/000000046872_crop_0.jpg",
+      "similarity": 0.5419164896011353
+    },
+    {
+      "category": "non_staff",
+      "image": "000000055528_crop_0.jpg",
+      "path": "test/non_staff_images/000000055528_crop_0.jpg",
+      "similarity": 0.4942592978477478
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033005_crop_0.jpg",
+      "path": "test/non_staff_images/000000033005_crop_0.jpg",
+      "similarity": 0.3851831257343292
+    },
+    {
+      "category": "non_staff",
+      "image": "000000046252_crop_1.jpg",
+      "path": "test/non_staff_images/000000046252_crop_1.jpg",
+      "similarity": 0.5070053339004517
+    },
+    {
+      "category": "non_staff",
+      "image": "000000031817_crop_0.jpg",
+      "path": "test/non_staff_images/000000031817_crop_0.jpg",
+      "similarity": 0.4003562927246094
+    },
+    {
+      "category": "non_staff",
+      "image": "000000029984_crop_0.jpg",
+      "path": "test/non_staff_images/000000029984_crop_0.jpg",
+      "similarity": 0.44996386766433716
+    },
+    {
+      "category": "non_staff",
+      "image": "000000024243_crop_0.jpg",
+      "path": "test/non_staff_images/000000024243_crop_0.jpg",
+      "similarity": 0.48391374945640564
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033104_crop_0.jpg",
+      "path": "test/non_staff_images/000000033104_crop_0.jpg",
+      "similarity": 0.42060786485671997
+    },
+    {
+      "category": "non_staff",
+      "image": "000000039914_crop_0.jpg",
+      "path": "test/non_staff_images/000000039914_crop_0.jpg",
+      "similarity": 0.44106990098953247
+    },
+    {
+      "category": "non_staff",
+      "image": "000000055950_crop_0.jpg",
+      "path": "test/non_staff_images/000000055950_crop_0.jpg",
+      "similarity": 0.3316594958305359
+    },
+    {
+      "category": "non_staff",
+      "image": "000000052996_crop_3.jpg",
+      "path": "test/non_staff_images/000000052996_crop_3.jpg",
+      "similarity": 0.5245980024337769
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032081_crop_0.jpg",
+      "path": "test/non_staff_images/000000032081_crop_0.jpg",
+      "similarity": 0.3794158101081848
+    },
+    {
+      "category": "non_staff",
+      "image": "000000025393_crop_0.jpg",
+      "path": "test/non_staff_images/000000025393_crop_0.jpg",
+      "similarity": 0.4991381764411926
+    },
+    {
+      "category": "non_staff",
+      "image": "000000043816_crop_0.jpg",
+      "path": "test/non_staff_images/000000043816_crop_0.jpg",
+      "similarity": 0.3270112872123718
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013729_crop_1.jpg",
+      "path": "test/non_staff_images/000000013729_crop_1.jpg",
+      "similarity": 0.5133092403411865
+    },
+    {
+      "category": "non_staff",
+      "image": "000000025393_crop_1.jpg",
+      "path": "test/non_staff_images/000000025393_crop_1.jpg",
+      "similarity": 0.468301385641098
+    },
+    {
+      "category": "non_staff",
+      "image": "000000047571_crop_1.jpg",
+      "path": "test/non_staff_images/000000047571_crop_1.jpg",
+      "similarity": 0.5027667284011841
+    },
+    {
+      "category": "non_staff",
+      "image": "000000023034_crop_0.jpg",
+      "path": "test/non_staff_images/000000023034_crop_0.jpg",
+      "similarity": 0.42008185386657715
+    },
+    {
+      "category": "non_staff",
+      "image": "000000043816_crop_1.jpg",
+      "path": "test/non_staff_images/000000043816_crop_1.jpg",
+      "similarity": 0.3597901165485382
+    },
+    {
+      "category": "non_staff",
+      "image": "000000015660_crop_0.jpg",
+      "path": "test/non_staff_images/000000015660_crop_0.jpg",
+      "similarity": 0.4690038859844208
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033221_crop_1.jpg",
+      "path": "test/non_staff_images/000000033221_crop_1.jpg",
+      "similarity": 0.393565833568573
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013291_crop_3.jpg",
+      "path": "test/non_staff_images/000000013291_crop_3.jpg",
+      "similarity": 0.416084885597229
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009590_crop_4.jpg",
+      "path": "test/non_staff_images/000000009590_crop_4.jpg",
+      "similarity": 0.39996621012687683
+    },
+    {
+      "category": "non_staff",
+      "image": "000000000885_crop_0.jpg",
+      "path": "test/non_staff_images/000000000885_crop_0.jpg",
+      "similarity": 0.32997894287109375
+    },
+    {
+      "category": "non_staff",
+      "image": "000000051314_crop_0.jpg",
+      "path": "test/non_staff_images/000000051314_crop_0.jpg",
+      "similarity": 0.4425799548625946
+    },
+    {
+      "category": "non_staff",
+      "image": "000000047585_crop_2.jpg",
+      "path": "test/non_staff_images/000000047585_crop_2.jpg",
+      "similarity": 0.5569405555725098
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009891_crop_0.jpg",
+      "path": "test/non_staff_images/000000009891_crop_0.jpg",
+      "similarity": 0.472683310508728
+    },
+    {
+      "category": "non_staff",
+      "image": "000000037751_crop_0.jpg",
+      "path": "test/non_staff_images/000000037751_crop_0.jpg",
+      "similarity": 0.4755192697048187
+    },
+    {
+      "category": "non_staff",
+      "image": "000000044877_crop_1.jpg",
+      "path": "test/non_staff_images/000000044877_crop_1.jpg",
+      "similarity": 0.3642994165420532
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032735_crop_0.jpg",
+      "path": "test/non_staff_images/000000032735_crop_0.jpg",
+      "similarity": 0.47907885909080505
+    },
+    {
+      "category": "non_staff",
+      "image": "000000018193_crop_0.jpg",
+      "path": "test/non_staff_images/000000018193_crop_0.jpg",
+      "similarity": 0.32634052634239197
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001000_crop_3.jpg",
+      "path": "test/non_staff_images/000000001000_crop_3.jpg",
+      "similarity": 0.45718300342559814
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013201_crop_0.jpg",
+      "path": "test/non_staff_images/000000013201_crop_0.jpg",
+      "similarity": 0.4585261642932892
+    },
+    {
+      "category": "non_staff",
+      "image": "000000010764_crop_0.jpg",
+      "path": "test/non_staff_images/000000010764_crop_0.jpg",
+      "similarity": 0.26449793577194214
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009448_crop_0.jpg",
+      "path": "test/non_staff_images/000000009448_crop_0.jpg",
+      "similarity": 0.42669689655303955
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032901_crop_1.jpg",
+      "path": "test/non_staff_images/000000032901_crop_1.jpg",
+      "similarity": 0.3966737687587738
+    },
+    {
+      "category": "non_staff",
+      "image": "000000025603_crop_0.jpg",
+      "path": "test/non_staff_images/000000025603_crop_0.jpg",
+      "similarity": 0.37856197357177734
+    },
+    {
+      "category": "non_staff",
+      "image": "000000008211_crop_0.jpg",
+      "path": "test/non_staff_images/000000008211_crop_0.jpg",
+      "similarity": 0.574847936630249
+    },
+    {
+      "category": "non_staff",
+      "image": "000000035197_crop_0.jpg",
+      "path": "test/non_staff_images/000000035197_crop_0.jpg",
+      "similarity": 0.4905168414115906
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001490_crop_0.jpg",
+      "path": "test/non_staff_images/000000001490_crop_0.jpg",
+      "similarity": 0.4702538847923279
+    },
+    {
+      "category": "non_staff",
+      "image": "000000038048_crop_1.jpg",
+      "path": "test/non_staff_images/000000038048_crop_1.jpg",
+      "similarity": 0.48821568489074707
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032901_crop_0.jpg",
+      "path": "test/non_staff_images/000000032901_crop_0.jpg",
+      "similarity": 0.4728879928588867
+    },
+    {
+      "category": "non_staff",
+      "image": "000000012639_crop_0.jpg",
+      "path": "test/non_staff_images/000000012639_crop_0.jpg",
+      "similarity": 0.4612847566604614
+    },
+    {
+      "category": "non_staff",
+      "image": "000000021903_crop_0.jpg",
+      "path": "test/non_staff_images/000000021903_crop_0.jpg",
+      "similarity": 0.47005003690719604
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001268_crop_0.jpg",
+      "path": "test/non_staff_images/000000001268_crop_0.jpg",
+      "similarity": 0.45103561878204346
+    },
+    {
+      "category": "non_staff",
+      "image": "000000049060_crop_0.jpg",
+      "path": "test/non_staff_images/000000049060_crop_0.jpg",
+      "similarity": 0.47001034021377563
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006954_crop_3.jpg",
+      "path": "test/non_staff_images/000000006954_crop_3.jpg",
+      "similarity": 0.33073747158050537
+    },
+    {
+      "category": "non_staff",
+      "image": "000000054593_crop_0.jpg",
+      "path": "test/non_staff_images/000000054593_crop_0.jpg",
+      "similarity": 0.3789345622062683
+    },
+    {
+      "category": "non_staff",
+      "image": "000000021879_crop_0.jpg",
+      "path": "test/non_staff_images/000000021879_crop_0.jpg",
+      "similarity": 0.3691815435886383
+    },
+    {
+      "category": "non_staff",
+      "image": "000000018491_crop_1.jpg",
+      "path": "test/non_staff_images/000000018491_crop_1.jpg",
+      "similarity": 0.4448111653327942
+    },
+    {
+      "category": "non_staff",
+      "image": "000000014439_crop_2.jpg",
+      "path": "test/non_staff_images/000000014439_crop_2.jpg",
+      "similarity": 0.469420850276947
+    },
+    {
+      "category": "non_staff",
+      "image": "000000025057_crop_0.jpg",
+      "path": "test/non_staff_images/000000025057_crop_0.jpg",
+      "similarity": 0.38615432381629944
+    },
+    {
+      "category": "non_staff",
+      "image": "000000044877_crop_0.jpg",
+      "path": "test/non_staff_images/000000044877_crop_0.jpg",
+      "similarity": 0.2790355086326599
+    },
+    {
+      "category": "non_staff",
+      "image": "000000036539_crop_0.jpg",
+      "path": "test/non_staff_images/000000036539_crop_0.jpg",
+      "similarity": 0.5502191781997681
+    },
+    {
+      "category": "non_staff",
+      "image": "000000033221_crop_2.jpg",
+      "path": "test/non_staff_images/000000033221_crop_2.jpg",
+      "similarity": 0.4801808297634125
+    },
+    {
+      "category": "non_staff",
+      "image": "000000049759_crop_0.jpg",
+      "path": "test/non_staff_images/000000049759_crop_0.jpg",
+      "similarity": 0.4252552390098572
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006471_crop_3.jpg",
+      "path": "test/non_staff_images/000000006471_crop_3.jpg",
+      "similarity": 0.439344584941864
+    },
+    {
+      "category": "non_staff",
+      "image": "000000012639_crop_1.jpg",
+      "path": "test/non_staff_images/000000012639_crop_1.jpg",
+      "similarity": 0.5047336220741272
+    },
+    {
+      "category": "non_staff",
+      "image": "000000025394_crop_0.jpg",
+      "path": "test/non_staff_images/000000025394_crop_0.jpg",
+      "similarity": 0.4412381649017334
+    },
+    {
+      "category": "non_staff",
+      "image": "000000053626_crop_1.jpg",
+      "path": "test/non_staff_images/000000053626_crop_1.jpg",
+      "similarity": 0.43128126859664917
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032334_crop_0.jpg",
+      "path": "test/non_staff_images/000000032334_crop_0.jpg",
+      "similarity": 0.31376707553863525
+    },
+    {
+      "category": "non_staff",
+      "image": "000000050380_crop_1.jpg",
+      "path": "test/non_staff_images/000000050380_crop_1.jpg",
+      "similarity": 0.39739832282066345
+    },
+    {
+      "category": "non_staff",
+      "image": "000000051712_crop_0.jpg",
+      "path": "test/non_staff_images/000000051712_crop_0.jpg",
+      "similarity": 0.45738446712493896
+    },
+    {
+      "category": "non_staff",
+      "image": "000000018150_crop_1.jpg",
+      "path": "test/non_staff_images/000000018150_crop_1.jpg",
+      "similarity": 0.41843679547309875
+    },
+    {
+      "category": "non_staff",
+      "image": "000000021604_crop_0.jpg",
+      "path": "test/non_staff_images/000000021604_crop_0.jpg",
+      "similarity": 0.488992303609848
+    },
+    {
+      "category": "non_staff",
+      "image": "000000050326_crop_0.jpg",
+      "path": "test/non_staff_images/000000050326_crop_0.jpg",
+      "similarity": 0.4698601961135864
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013659_crop_0.jpg",
+      "path": "test/non_staff_images/000000013659_crop_0.jpg",
+      "similarity": 0.42550238966941833
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009378_crop_1.jpg",
+      "path": "test/non_staff_images/000000009378_crop_1.jpg",
+      "similarity": 0.3356347978115082
+    },
+    {
+      "category": "non_staff",
+      "image": "000000022371_crop_0.jpg",
+      "path": "test/non_staff_images/000000022371_crop_0.jpg",
+      "similarity": 0.4639914035797119
+    },
+    {
+      "category": "non_staff",
+      "image": "000000008021_crop_2.jpg",
+      "path": "test/non_staff_images/000000008021_crop_2.jpg",
+      "similarity": 0.2792035937309265
+    },
+    {
+      "category": "non_staff",
+      "image": "000000045550_crop_1.jpg",
+      "path": "test/non_staff_images/000000045550_crop_1.jpg",
+      "similarity": 0.5461894273757935
+    },
+    {
+      "category": "non_staff",
+      "image": "000000044195_crop_0.jpg",
+      "path": "test/non_staff_images/000000044195_crop_0.jpg",
+      "similarity": 0.43820875883102417
+    },
+    {
+      "category": "non_staff",
+      "image": "000000016598_crop_0.jpg",
+      "path": "test/non_staff_images/000000016598_crop_0.jpg",
+      "similarity": 0.4764043390750885
+    },
+    {
+      "category": "non_staff",
+      "image": "000000024243_crop_1.jpg",
+      "path": "test/non_staff_images/000000024243_crop_1.jpg",
+      "similarity": 0.37695908546447754
+    },
+    {
+      "category": "non_staff",
+      "image": "000000052996_crop_1.jpg",
+      "path": "test/non_staff_images/000000052996_crop_1.jpg",
+      "similarity": 0.4550856351852417
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032570_crop_0.jpg",
+      "path": "test/non_staff_images/000000032570_crop_0.jpg",
+      "similarity": 0.4472517669200897
+    },
+    {
+      "category": "non_staff",
+      "image": "000000036539_crop_1.jpg",
+      "path": "test/non_staff_images/000000036539_crop_1.jpg",
+      "similarity": 0.3769594132900238
+    },
+    {
+      "category": "non_staff",
+      "image": "000000038210_crop_0.jpg",
+      "path": "test/non_staff_images/000000038210_crop_0.jpg",
+      "similarity": 0.30742794275283813
+    },
+    {
+      "category": "non_staff",
+      "image": "000000004134_crop_1.jpg",
+      "path": "test/non_staff_images/000000004134_crop_1.jpg",
+      "similarity": 0.5238046646118164
+    },
+    {
+      "category": "non_staff",
+      "image": "000000005529_crop_0.jpg",
+      "path": "test/non_staff_images/000000005529_crop_0.jpg",
+      "similarity": 0.44775277376174927
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013291_crop_2.jpg",
+      "path": "test/non_staff_images/000000013291_crop_2.jpg",
+      "similarity": 0.43655306100845337
+    },
+    {
+      "category": "non_staff",
+      "image": "000000007088_crop_0.jpg",
+      "path": "test/non_staff_images/000000007088_crop_0.jpg",
+      "similarity": 0.4416368305683136
+    },
+    {
+      "category": "non_staff",
+      "image": "000000048564_crop_0.jpg",
+      "path": "test/non_staff_images/000000048564_crop_0.jpg",
+      "similarity": 0.39629489183425903
+    },
+    {
+      "category": "non_staff",
+      "image": "000000057597_crop_2.jpg",
+      "path": "test/non_staff_images/000000057597_crop_2.jpg",
+      "similarity": 0.30077821016311646
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006954_crop_2.jpg",
+      "path": "test/non_staff_images/000000006954_crop_2.jpg",
+      "similarity": 0.37988221645355225
+    },
+    {
+      "category": "non_staff",
+      "image": "000000013291_crop_1.jpg",
+      "path": "test/non_staff_images/000000013291_crop_1.jpg",
+      "similarity": 0.48781007528305054
+    },
+    {
+      "category": "non_staff",
+      "image": "000000006763_crop_1.jpg",
+      "path": "test/non_staff_images/000000006763_crop_1.jpg",
+      "similarity": 0.3361411690711975
+    },
+    {
+      "category": "non_staff",
+      "image": "000000001000_crop_0.jpg",
+      "path": "test/non_staff_images/000000001000_crop_0.jpg",
+      "similarity": 0.40836992859840393
+    },
+    {
+      "category": "non_staff",
+      "image": "000000054164_crop_0.jpg",
+      "path": "test/non_staff_images/000000054164_crop_0.jpg",
+      "similarity": 0.4331340193748474
+    },
+    {
+      "category": "non_staff",
+      "image": "000000026690_crop_0.jpg",
+      "path": "test/non_staff_images/000000026690_crop_0.jpg",
+      "similarity": 0.5403069257736206
+    },
+    {
+      "category": "non_staff",
+      "image": "000000050638_crop_0.jpg",
+      "path": "test/non_staff_images/000000050638_crop_0.jpg",
+      "similarity": 0.5199969410896301
+    },
+    {
+      "category": "non_staff",
+      "image": "000000015956_crop_0.jpg",
+      "path": "test/non_staff_images/000000015956_crop_0.jpg",
+      "similarity": 0.523546576499939
+    },
+    {
+      "category": "non_staff",
+      "image": "000000008844_crop_0.jpg",
+      "path": "test/non_staff_images/000000008844_crop_0.jpg",
+      "similarity": 0.2701740264892578
+    },
+    {
+      "category": "non_staff",
+      "image": "000000000885_crop_2.jpg",
+      "path": "test/non_staff_images/000000000885_crop_2.jpg",
+      "similarity": 0.34878045320510864
+    },
+    {
+      "category": "non_staff",
+      "image": "000000027972_crop_0.jpg",
+      "path": "test/non_staff_images/000000027972_crop_0.jpg",
+      "similarity": 0.39024826884269714
+    },
+    {
+      "category": "non_staff",
+      "image": "000000046048_crop_0.jpg",
+      "path": "test/non_staff_images/000000046048_crop_0.jpg",
+      "similarity": 0.44696083664894104
+    },
+    {
+      "category": "non_staff",
+      "image": "000000047585_crop_0.jpg",
+      "path": "test/non_staff_images/000000047585_crop_0.jpg",
+      "similarity": 0.43080300092697144
+    },
+    {
+      "category": "non_staff",
+      "image": "000000016249_crop_1.jpg",
+      "path": "test/non_staff_images/000000016249_crop_1.jpg",
+      "similarity": 0.3494614362716675
+    },
+    {
+      "category": "non_staff",
+      "image": "000000034139_crop_0.jpg",
+      "path": "test/non_staff_images/000000034139_crop_0.jpg",
+      "similarity": 0.5270935893058777
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009590_crop_3.jpg",
+      "path": "test/non_staff_images/000000009590_crop_3.jpg",
+      "similarity": 0.49406397342681885
+    },
+    {
+      "category": "non_staff",
+      "image": "000000032861_crop_0.jpg",
+      "path": "test/non_staff_images/000000032861_crop_0.jpg",
+      "similarity": 0.5523528456687927
+    },
+    {
+      "category": "non_staff",
+      "image": "000000047801_crop_0.jpg",
+      "path": "test/non_staff_images/000000047801_crop_0.jpg",
+      "similarity": 0.3901180922985077
+    },
+    {
+      "category": "non_staff",
+      "image": "000000004134_crop_2.jpg",
+      "path": "test/non_staff_images/000000004134_crop_2.jpg",
+      "similarity": 0.47491997480392456
+    },
+    {
+      "category": "non_staff",
+      "image": "000000023126_crop_0.jpg",
+      "path": "test/non_staff_images/000000023126_crop_0.jpg",
+      "similarity": 0.42097145318984985
+    },
+    {
+      "category": "non_staff",
+      "image": "000000002685_crop_2.jpg",
+      "path": "test/non_staff_images/000000002685_crop_2.jpg",
+      "similarity": 0.41484034061431885
+    },
+    {
+      "category": "non_staff",
+      "image": "000000009590_crop_1.jpg",
+      "path": "test/non_staff_images/000000009590_crop_1.jpg",
+      "similarity": 0.38689935207366943
+    },
+    {
+      "category": "non_staff",
+      "image": "000000053626_crop_0.jpg",
+      "path": "test/non_staff_images/000000053626_crop_0.jpg",
+      "similarity": 0.5679539442062378
+    },
+    {
+      "category": "non_staff",
+      "image": "000000019924_crop_0.jpg",
+      "path": "test/non_staff_images/000000019924_crop_0.jpg",
+      "similarity": 0.36204227805137634
+    },
+    {
+      "category": "non_staff",
+      "image": "000000007281_crop_1.jpg",
+      "path": "test/non_staff_images/000000007281_crop_1.jpg",
+      "similarity": 0.481942355632782
+    },
+    {
+      "category": "non_staff",
+      "image": "000000054593_crop_3.jpg",
+      "path": "test/non_staff_images/000000054593_crop_3.jpg",
+      "similarity": 0.3966630697250366
+    },
+    {
+      "category": "non_staff",
+      "image": "000000050380_crop_0.jpg",
+      "path": "test/non_staff_images/000000050380_crop_0.jpg",
+      "similarity": 0.4186270833015442
+    },
+    {
+      "category": "non_staff",
+      "image": "000000005193_crop_1.jpg",
+      "path": "test/non_staff_images/000000005193_crop_1.jpg",
+      "similarity": 0.4547022581100464
+    },
+    {
+      "category": "non_staff",
+      "image": "000000018150_crop_0.jpg",
+      "path": "test/non_staff_images/000000018150_crop_0.jpg",
+      "similarity": 0.4774940311908722
+    },
+    {
+      "category": "non_staff",
+      "image": "000000045070_crop_0.jpg",
+      "path": "test/non_staff_images/000000045070_crop_0.jpg",
+      "similarity": 0.4326111078262329
+    },
+    {
+      "category": "non_staff",
+      "image": "000000052996_crop_2.jpg",
+      "path": "test/non_staff_images/000000052996_crop_2.jpg",
+      "similarity": 0.5192215442657471
+    },
+    {
+      "category": "non_staff",
+      "image": "000000045550_crop_0.jpg",
+      "path": "test/non_staff_images/000000045550_crop_0.jpg",
+      "similarity": 0.3000594973564148
+    },
+    {
+      "category": "non_staff",
+      "image": "000000053626_crop_3.jpg",
+      "path": "test/non_staff_images/000000053626_crop_3.jpg",
+      "similarity": 0.46683961153030396
+    },
+    {
+      "category": "non_staff",
+      "image": "000000054931_crop_0.jpg",
+      "path": "test/non_staff_images/000000054931_crop_0.jpg",
+      "similarity": 0.3943140506744385
+    }
+  ]
+}

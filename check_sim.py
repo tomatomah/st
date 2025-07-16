@@ -1,9 +1,7 @@
-import glob
 import os
-import shutil
 
+import matplotlib.pyplot as plt
 import numpy as np
-import onnxruntime as ort
 from PIL import Image
 
 
@@ -164,97 +162,103 @@ class SimpleStaffDetector:
         return summary
 
 
-def print_summary(summary):
-    """Print processing summary"""
-    print("\n" + "=" * 60)
-    print("PROCESSING SUMMARY")
-    print("=" * 60)
-    print(f"Total images found:     {summary['total_images']}")
-    print(f"Successfully processed: {summary['processed_images']}")
-    print(f"Staff detected:         {summary['staff_count']}")
-    print(f"Non-staff detected:     {summary['non_staff_count']}")
-    print(f"Staff detection rate:   {summary['staff_detection_rate']:.2f}%")
-    print(f"Threshold used:         {summary['threshold']}")
-    print("=" * 60)
+def diagnose_similarity_distribution(detector, uniform_path):
+    """類似度の分布を可視化して問題を診断"""
+
+    # 1. スタッフ画像とそれ以外の画像の類似度を収集
+    staff_similarities = []
+    non_staff_similarities = []
+
+    # テスト画像のパスを手動で分類（一時的に）
+    # 実際のスタッフ画像のディレクトリ
+    staff_dir = "test/staff_images"
+    non_staff_dir = "test/person_images"
+
+    print("📊 類似度分析を開始...")
+
+    # スタッフ画像の類似度計算
+    import glob
+
+    staff_images = glob.glob(f"{staff_dir}/*.jpg") + glob.glob(f"{staff_dir}/*.png")
+    for img_path in staff_images:
+        try:
+            sim = detector.calculate_similarity(uniform_path, img_path)
+            staff_similarities.append(sim)
+            print(f"Staff: {img_path} -> {sim:.4f}")
+        except:
+            pass
+
+    # 非スタッフ画像の類似度計算
+    non_staff_images = glob.glob(f"{non_staff_dir}/*.jpg") + glob.glob(f"{non_staff_dir}/*.png")
+    for img_path in non_staff_images:
+        try:
+            sim = detector.calculate_similarity(uniform_path, img_path)
+            non_staff_similarities.append(sim)
+            print(f"Non-staff: {img_path} -> {sim:.4f}")
+        except:
+            pass
+
+    # 2. 統計情報の表示
+    print("\n📈 統計情報:")
+    print(
+        f"スタッフ画像の類似度: 平均={np.mean(staff_similarities):.4f}, "
+        f"最小={np.min(staff_similarities):.4f}, 最大={np.max(staff_similarities):.4f}"
+    )
+    print(
+        f"非スタッフ画像の類似度: 平均={np.mean(non_staff_similarities):.4f}, "
+        f"最小={np.min(non_staff_similarities):.4f}, 最大={np.max(non_staff_similarities):.4f}"
+    )
+
+    # 3. ヒストグラムで可視化
+    plt.figure(figsize=(10, 6))
+    plt.hist(staff_similarities, bins=20, alpha=0.5, label="Staff", color="blue")
+    plt.hist(non_staff_similarities, bins=20, alpha=0.5, label="Non-staff", color="red")
+    plt.xlabel("Similarity Score")
+    plt.ylabel("Count")
+    plt.title("Similarity Distribution: Staff vs Non-staff")
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    plt.savefig("similarity_distribution.png")
+    plt.close()
+
+    print("\n💡 分析結果を 'similarity_distribution.png' に保存しました")
+
+    # 4. 問題の診断
+    overlap = calculate_overlap(staff_similarities, non_staff_similarities)
+    print(f"\n⚠️ 分布の重なり度: {overlap:.2%}")
+
+    if overlap > 0.7:
+        print("❌ 重大な問題: スタッフと非スタッフの類似度がほぼ区別できません")
+    elif overlap > 0.3:
+        print("⚠️ 中程度の問題: かなりの重なりがあります")
+    else:
+        print("✓ 分布は比較的分離しています")
+
+    return {
+        "staff_similarities": staff_similarities,
+        "non_staff_similarities": non_staff_similarities,
+        "overlap": overlap,
+    }
 
 
-def main():
-    """Main function"""
-    # ===== CONFIGURATION =====
-    # Specify your file paths here
-    ONNX_MODEL_PATH = "onnx_models/clip_RN50.onnx"  # Path to ONNX model
-    UNIFORM_IMAGE_PATH = "uniform.jpg"  # Path to uniform reference image
+def calculate_overlap(list1, list2):
+    """2つの分布の重なり度を計算"""
+    min_val = min(min(list1), min(list2))
+    max_val = max(max(list1), max(list2))
 
-    # For single image processing
-    PERSON_IMAGE_PATH = "staff1.jpg"  # Path to person image to check
+    hist1, _ = np.histogram(list1, bins=50, range=(min_val, max_val))
+    hist2, _ = np.histogram(list2, bins=50, range=(min_val, max_val))
 
-    # For batch processing
-    INPUT_DIRECTORY = "test_images"  # Directory containing images to process
-    OUTPUT_DIRECTORY = "results"  # Output directory for classification
+    # 正規化
+    hist1 = hist1 / np.sum(hist1)
+    hist2 = hist2 / np.sum(hist2)
 
-    INPUT_SIZE = 224  # Input image size (224 for most models)
-    THRESHOLD = 0.6  # Similarity threshold for staff detection
-
-    # Processing mode
-    BATCH_MODE = True  # Set to True for batch processing, False for single image
-
-    try:
-        # Initialize detector
-        detector = SimpleStaffDetector(ONNX_MODEL_PATH, INPUT_SIZE)
-
-        if BATCH_MODE:
-            # Batch processing mode
-            print(f"\n🔄 BATCH PROCESSING MODE")
-            print(f"Uniform image: {UNIFORM_IMAGE_PATH}")
-            print(f"Input directory: {INPUT_DIRECTORY}")
-            print(f"Output directory: {OUTPUT_DIRECTORY}")
-            print(f"Threshold: {THRESHOLD}")
-
-            # Process directory
-            summary = detector.process_directory(
-                uniform_path=UNIFORM_IMAGE_PATH,
-                input_dir=INPUT_DIRECTORY,
-                output_dir=OUTPUT_DIRECTORY,
-                threshold=THRESHOLD,
-            )
-
-            # Print summary
-            print_summary(summary)
-
-            # Show file distribution
-            print(f"\nFiles have been sorted into:")
-            print(f"  📁 Staff:     {os.path.join(OUTPUT_DIRECTORY, 'staff')}")
-            print(f"  📁 Non-staff: {os.path.join(OUTPUT_DIRECTORY, 'non_staff')}")
-
-        else:
-            # Single image processing mode
-            print(f"\n🔄 SINGLE IMAGE MODE")
-            print("Calculating similarity...")
-            similarity = detector.calculate_similarity(UNIFORM_IMAGE_PATH, PERSON_IMAGE_PATH)
-
-            # Results
-            is_staff = similarity > THRESHOLD
-            status = "✓ STAFF" if is_staff else "✗ NOT STAFF"
-
-            print(f"\nResults:")
-            print(f"Uniform image: {UNIFORM_IMAGE_PATH}")
-            print(f"Person image:  {PERSON_IMAGE_PATH}")
-            print(f"Similarity:    {similarity:.6f}")
-            print(f"Threshold:     {THRESHOLD}")
-            print(f"Decision:      {status}")
-
-    except FileNotFoundError as e:
-        print(f"❌ Error: {e}")
-        print("\n💡 Make sure the following files/directories exist:")
-        print(f"   - ONNX model: {ONNX_MODEL_PATH}")
-        print(f"   - Uniform image: {UNIFORM_IMAGE_PATH}")
-        if BATCH_MODE:
-            print(f"   - Input directory: {INPUT_DIRECTORY}")
-        else:
-            print(f"   - Person image: {PERSON_IMAGE_PATH}")
-    except Exception as e:
-        print(f"❌ Unexpected error: {e}")
+    # 重なり部分の計算
+    overlap = np.sum(np.minimum(hist1, hist2))
+    return overlap
 
 
+# 使用例
 if __name__ == "__main__":
-    main()
+    detector = SimpleStaffDetector("onnx_models/clip_RN50.onnx")
+    results = diagnose_similarity_distribution(detector, "test/uniform_images/uniform1.jpg")
