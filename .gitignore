@@ -3,3 +3,4 @@ onnx_models
 test
 results
 rm
+*.jpg
