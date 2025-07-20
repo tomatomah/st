@@ -43,7 +43,6 @@ class CLIPSimilarityDetector:
         return float(np.dot(reference_feat, target_feat))
 
 
-# 使用例
 if __name__ == "__main__":
     reference_img = "sample/staff1.jpg"
     target_img = "sample/staff2.jpg"
