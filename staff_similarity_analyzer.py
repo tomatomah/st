@@ -10,7 +10,7 @@ class StaffSimilarityAnalyzer:
     def __init__(self, model_path):
         self.detector = CLIPSimilarityDetector(model_path)
 
-    def analyze_and_save(self, registered_dir, staff_dir, non_staff_dir, output_dir="results"):
+    def analyze_and_save(self, registered_dir, staff_dir, non_staff_dir, output_dir="results/analysis"):
         os.makedirs(output_dir, exist_ok=True)
 
         # 画像パス取得
