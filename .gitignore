@@ -3,3 +3,5 @@ onnx_models
 test
 results
 rm
+data
+__pycache__
